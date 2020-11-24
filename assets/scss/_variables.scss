@@ -1,0 +1,120 @@
+// Body
+//$body-bg: #f8fafc;
+
+// Typography
+//$font-family-sans-serif: 'Nunito', sans-serif;
+// $font-size-base: 0.9rem;
+// $line-height-base: 1.6;
+
+// // Colors
+// $blue: #3490dc;
+// $indigo: #6574cd;
+// $purple: #9561e2;
+// $pink: #f66d9b;
+// $red: #e3342f;
+// $orange: #f6993f;
+// $yellow: #ffed4a;
+// $green: #38c172;
+// $teal: #4dc0b5;
+// $cyan: #6cb2eb;
+
+// General
+$spacer: 1rem;
+
+// Colors
+// Greens
+$apple: #4cb848;
+$deyork: lighten($apple, 15%); //#82cd7f
+$goblin: darken($apple, 15%); //#358132
+// Blues
+$sanmarino: #4759a7;
+$shipcove: lighten($sanmarino, 15%); //#7685c5
+$rhino: darken($sanmarino, 15%); //#303c71
+// Blacks
+$mostly-black: #252525; // gray-900ish
+$black: #000;
+// Grays
+$french-gray: #bbbbbd;
+$middle-gray: mix($mostly-black, $french-gray, 50%); // #707071
+// Red / Danger
+$red: #f86c6b;
+// Alternative names
+$text-muted: $french-gray;
+$danger: $red;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    'apple': $apple,
+    'deyork': $deyork,
+    'goblin': $goblin,
+    'sanmarino': $sanmarino,
+    'shipcove': $shipcove,
+    'rhino': $rhino,
+    'red': $red,
+    'french-gray': $french-gray,
+    'middle-gray': $middle-gray,
+    'mostly-black': $mostly-black,
+    'black': $black,
+  ),
+  $colors
+);
+
+// Typography
+$font-family-base: 'Aileron', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace;
+$font-size-base: 1.125rem; // 18px
+$font-weight-base: 300;
+$line-height-base: 1.5;
+$headings-margin-bottom: $spacer / 2;
+$paragraph-margin-bottom: 1rem;
+$body-color: $black;
+$body-bg: #fff;
+$link-color: $apple;
+$link-decoration: none;
+$link-hover-color: $deyork;
+$link-hover-decoration: none;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+// Headings
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$headings-margin-bottom: ($spacer / 2);
+$headings-font-family: inherit;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+$headings-color: inherit;
+
+// Breakpoints
+$grid-xs: 0;
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+
+$max-width: 1430px;
+
+// Components
+$border-width: 1px;
+
+// Buttons and Forms
+$input-btn-padding-y: 0.375rem;
+$input-btn-padding-x: 0.75rem;
+$input-btn-font-family: null;
+$input-btn-font-size: $font-size-base;
+$input-btn-line-height: $line-height-base;
+$label-margin-bottom: 0.5rem;
+$form-check-input-gutter: 1.25rem;
+$form-check-input-margin-y: 0.3rem;
+$form-check-input-margin-x: 0.25rem;
+$form-check-inline-margin-x: 0.75rem;
+$form-check-inline-input-margin-x: 0.3125rem;

@@ -1,0 +1,68 @@
+// Global
+body {
+  padding-top: 65px;
+}
+
+hr {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  border: 0;
+  border-top: 1px solid $sanmarino;
+}
+
+.content-container {
+  min-height: 100vh;
+}
+
+// Logo
+.logo {
+  max-width: 100%;
+  height: auto;
+  .color-apple {
+    fill: $apple;
+  }
+  .color-sanmarino {
+    fill: $sanmarino;
+  }
+  .color-none {
+    fill: none;
+  }
+}
+
+// Headers
+.page-header,
+.entry-header {
+  margin-bottom: 2rem; // 32px
+  border-bottom: 1px solid $sanmarino;
+  h1:not(.entry-title) {
+    margin-bottom: 1rem;
+  }
+  .entry-meta {
+    margin-bottom: 1rem;
+  }
+}
+
+// Content
+section.page {
+  padding: 0 30px;
+
+  .content {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .section-description {
+    font-size: 1.25rem; // 20px
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+}
+
+// Blog
+.entry-content .wp-block-code {
+  border-radius: 0;
+  margin: 2rem 0; // 32px
+}
