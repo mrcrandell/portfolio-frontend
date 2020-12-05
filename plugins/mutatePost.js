@@ -1,3 +1,4 @@
+import * as readingTime from 'reading-time'
 export default ({ app }, inject) => {
   // Inject $hello(msg) in Vue, context and store.
   inject('mutatePost', (postData) => {
@@ -9,7 +10,19 @@ export default ({ app }, inject) => {
       '/blog'
     )
     post.date = new Date(postData.date)
+    // Mutate Categories
+    post.categories = postData._embedded['wp:term'][0].filter(
+      (category) => category.slug !== 'uncategorized'
+    )
+    post.categories.forEach((category) => {
+      category.link = '/blog/category/' + category.slug
+    })
+    // Content
     post.content = postData.content.rendered
+    post.exceprt = postData.excerpt.rendered
+    post.readTime = readingTime(postData.content.rendered, {
+      wordsPerMinute: 300,
+    }).text
     // Featured Img
     post.featuredImg = {
       alt: '',

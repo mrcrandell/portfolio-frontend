@@ -1,7 +1,10 @@
 <template>
   <div class="site-container">
     <LayoutHeader />
-    <Nuxt />
+    <div class="content-container">
+      <Nuxt />
+    </div>
+    <LayoutFooter />
   </div>
 </template>
 

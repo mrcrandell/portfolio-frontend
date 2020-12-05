@@ -1,32 +1,28 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio-frontend</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="home-container">
+    <Intro />
+    <Portfolio :projects="projects" />
   </div>
 </template>
 
 <script>
-export default {}
+import Intro from '~/components/sections/Intro'
+import Portfolio from '~/components/sections/Portfolio'
+export default {
+  components: {
+    Intro,
+    Portfolio,
+  },
+  async asyncData({ app }) {
+    const { data } = await app.$axios.get(
+      `${process.env.APP_URL}/data/portfolio.json`
+    )
+    // const projects = projectsData
+    // eslint-disable-next-line
+    // console.log(data)
+    return { projects: data }
+  },
+}
 </script>
 
 <style></style>

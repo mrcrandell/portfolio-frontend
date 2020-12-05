@@ -5,7 +5,7 @@
       <source media="(min-width: 576px)" :srcset="featuredImg.large.src" />
       <img
         loading="lazy"
-        class="img-responsive"
+        class="img-fluid"
         :src="featuredImg.medium.src"
         :alt="featuredImg.alt"
       />
