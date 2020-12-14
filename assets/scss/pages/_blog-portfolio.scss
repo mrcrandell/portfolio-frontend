@@ -85,7 +85,7 @@ section.page {
     padding: 0 4rem; // 64px
     color: #fff;
     h1 {
-      font-size: 3.125rem; // 50px
+      // font-size: 3.125rem; // 50px
       margin-bottom: 1rem;
       color: #fff;
     }
@@ -140,11 +140,12 @@ section.page {
       padding: 0 4rem; // 64px
     }
     h2 {
-      margin-bottom: 2rem; // 32px
+      margin-top: ($spacer * 3); // 48px;
+      margin-bottom: ($spacer * 2); // 32px
     }
     .wp-block-code {
       border-radius: 0;
-      margin: 2rem 0; // 32px
+      margin: ($spacer * 2) 0; // 32px
       code {
         font-size: 1.25rem; // 20px
         white-space: pre-wrap;
@@ -157,5 +158,97 @@ section.page {
   .token.doctype,
   .token.cdata {
     color: #81a1c1;
+  }
+}
+
+// Bootstrap Classes
+.figure {
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: $spacer / 2;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: $middle-gray;
+}
+
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+  .entry .entry-content & {
+    display: block;
+  }
+}
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: ($spacer * 2) auto;
+  height: auto;
+  img {
+    margin: 0 auto;
+  }
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: ($spacer * 2);
+  height: auto;
+}
+
+@media (min-width: $grid-sm) {
+  .alignleft {
+    float: left;
+    margin-right: ($spacer * 2);
+  }
+
+  .alignright {
+    float: right;
+    margin-left: ($spacer * 2);
+  }
+}
+
+/** Captions */
+.wp-caption {
+  @extend .figure;
+}
+
+.wp-caption img {
+  @extend .figure-img;
+  @extend .img-fluid;
+}
+
+.wp-caption-text {
+  @extend .figure-caption;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+  @extend .sr-only;
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 }

@@ -51,5 +51,53 @@ export default {
   @include transition(box-shadow 0.3s ease-in-out);
   display: flex;
   flex-direction: column;
+  div.client-img {
+    overflow: hidden;
+    position: relative;
+    img {
+      display: block;
+      max-width: 101%;
+      width: 101%;
+      height: auto;
+      @include transition(all 0.3s ease-in-out);
+    }
+    .hover-img {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+    }
+  }
+  div.info {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .client-name {
+      font-size: 1rem; // 16px
+      line-height: 1.3;
+      color: $black;
+      margin-bottom: 0.5rem;
+      flex: 1;
+    }
+    .client-location {
+      font-size: 0.875rem; // 14px
+      color: $middle-gray;
+    }
+  }
+  &:hover {
+    @include box-shadow(2);
+    div.client-img {
+      .main-img {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .hover-img {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.05);
+      }
+    }
+  }
 }
 </style>

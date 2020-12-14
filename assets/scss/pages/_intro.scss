@@ -65,12 +65,12 @@
   }
   h1.slogan {
     color: #fff;
-    font-size: 1.875rem; // 30px
+    font-size: $h3-font-size;
     line-height: normal;
     //margin-top: 100px;
     margin-bottom: 1.875rem; // 30px
     @media (min-width: $grid-sm) {
-      font-size: 3.125rem; // 50px
+      font-size: $h1-font-size;
     }
     br {
       display: none;

@@ -1,0 +1,26 @@
+// Color Swatches
+.color-swatches {
+  display: grid;
+  grid-gap: 30px;
+  @media (min-width: $grid-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.color-swatch {
+  min-height: 100px;
+  @include box_shadow(3);
+  font-size: 1rem;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 5px solid #fff;
+  color: #fff;
+  background-color: #eee;
+  @each $color, $value in $colors {
+    $i: index(($colors), ($color $value));
+    &.swatch#{$i} {
+      color: color-yiq($value);
+      background-color: $value;
+    }
+  }
+}

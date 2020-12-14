@@ -1,0 +1,21 @@
+// Alerts
+.alert {
+  @include box_shadow(3);
+  padding: 0.5rem 1rem;
+  border: 5px solid #fff;
+  color: #fff;
+  margin-bottom: $paragraph-margin-bottom / 2;
+  line-height: 1.3;
+}
+.alert-success {
+  background-color: $apple;
+  .alert-link {
+    color: darken($apple, 50%);
+  }
+}
+.alert-danger {
+  background-color: $red;
+  .alert-link {
+    color: darken($red, 50%);
+  }
+}
