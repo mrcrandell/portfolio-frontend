@@ -56,8 +56,8 @@ export default {
     position: relative;
     img {
       display: block;
-      max-width: 101%;
-      width: 101%;
+      max-width: 100%;
+      width: 100%;
       height: auto;
       @include transition(all 0.3s ease-in-out);
     }

@@ -200,14 +200,52 @@
         A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
         </div>-->
       </div>
+      <div>
+        <hr />
+        <h1>Components</h1>
+      </div>
+    </div>
+    <div class="full-width">
+      <masthead :color="'#4759a7'">
+        <template #picture>
+          <img
+            loading="lazy"
+            class="img-fluid"
+            src="~assets/img/intro-wallpaper.jpg"
+            srcset="
+              ~assets/img/intro-wallpaper.jpg    1x,
+              ~assets/img/intro-wallpaper@2x.jpg 2x
+            "
+            alt="Anybody can make a website"
+          />
+        </template>
+        <template #name>Masthead</template>
+        <template #meta>
+          <div>Meta Data 1</div>
+          <div>Meta Data 2</div>
+        </template>
+      </masthead>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      postCard: {},
+    }
+  },
+}
+</script>
 <style scoped lang="scss">
 @import '@/assets/scss/variables';
 @import '@/assets/scss/mixins';
 .style-page {
   padding: ($nav-height + 3rem) 2rem 0 2rem;
+  .full-width {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }
 .content {
   max-width: $max-width;

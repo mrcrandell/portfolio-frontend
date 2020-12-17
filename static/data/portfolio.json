@@ -3,6 +3,14 @@
   "slug": "vicksburg-family-dentistry",
   "city": "Vicksburg",
   "state": "MI",
-  "displayImg": "/img/portfolio/vicksburg-family-dentistry/vicksburg-family-dentistry-thumbnail1.jpg",
-  "hoverImg": "/img/portfolio/vicksburg-family-dentistry/vicksburg-family-dentistry-thumbnail2.jpg"
+  "displayImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail1.jpg",
+  "hoverImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail2.jpg"
+},
+{
+  "name": "Gregg's Gourmet Cafe",
+  "slug": "greggs-gourmet-cafe",
+  "city": "Clarkston",
+  "state": "MI",
+  "displayImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail1.jpg",
+  "hoverImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail2.jpg"
 }]

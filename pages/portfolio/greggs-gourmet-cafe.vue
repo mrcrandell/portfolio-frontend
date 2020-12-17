@@ -4,31 +4,34 @@
       <template #picture>
         <source
           type="image/webp"
-          srcset="/img/portfolio/vicksburg-family-dentistry/featured-img.webp"
+          srcset="/img/portfolio/greggs-gourmet-cafe/featured-img.webp"
         />
         <source
           type="image/jpeg"
-          srcset="/img/portfolio/vicksburg-family-dentistry/featured-img.jpg"
+          srcset="/img/portfolio/greggs-gourmet-cafe/featured-img.jpg"
         />
         <img
           loading="lazy"
           class="img-fluid"
-          src="/img/portfolio/vicksburg-family-dentistry/featured-img.jpg"
+          src="/img/portfolio/greggs-gourmet-cafe/featured-img.jpg"
           srcset="
-            /img/portfolio/vicksburg-family-dentistry/featured-img.jpg    1x,
-            /img/portfolio/vicksburg-family-dentistry/featured-img@2x.jpg 2x
+            /img/portfolio/greggs-gourmet-cafe/featured-img.jpg    1x,
+            /img/portfolio/greggs-gourmet-cafe/featured-img@2x.jpg 2x
           "
-          alt="Anybody can make a website"
+          alt="Gregg's Gourmet Cafe"
         />
       </template>
-      <template #name>Vicksburg Family Dentistry</template>
+      <template #name>Gregg's Gourmet Cafe</template>
       <template #meta>
-        <div>Vicksburg, MI</div>
-        <a href="https://www.vicksburgfamilydentistry.com" target="_blank"
-          >View Website</a
-        >
+        <div>Clarkston, MI</div>
       </template>
     </masthead>
+    <p>
+      Gregg's Gourmet Cafe has the best breadsticks in the area. For a few
+      years, I was lucky enough to work with them to create a website. It was
+      built using WordPress with a theme built using the
+      <a href="https://roots.io/sage/" target="_blank">Sage</a> theme framework.
+    </p>
     <color-swatch
       v-for="colorSwatch in colorPalette"
       :key="colorSwatch.name"
@@ -48,20 +51,24 @@ export default {
     return {
       colorPalette: [
         {
-          name: 'Deep Cerulean',
-          hex: '#006DB0',
+          name: 'Crimson',
+          hex: '#ED2D38',
         },
         {
-          name: 'Emporor',
-          hex: '#555555',
+          name: 'Greenpea',
+          hex: '#245E36',
+        },
+        {
+          name: 'Space Cadet',
+          hex: '#173753',
         },
         {
           name: 'Success',
           hex: '#28A745',
         },
         {
-          name: 'Cerulean / Info',
-          hex: '#0AB1C7',
+          name: 'Info',
+          hex: '#6DAEDB',
         },
         {
           name: 'Warning',
@@ -73,11 +80,11 @@ export default {
         },
         {
           name: 'Light',
-          hex: '#FFFFFF',
+          hex: '#F8F9FA',
         },
         {
-          name: 'Swamp / Dark',
-          hex: '#000E16',
+          name: 'Dark',
+          hex: '#343A40',
         },
       ],
     }
