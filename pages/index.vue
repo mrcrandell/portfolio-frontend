@@ -22,6 +22,17 @@ export default {
     // console.log(data)
     return { projects: data }
   },
+  head: {
+    title: "Matt Crandell's Portfolio | Web Developer",
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Web development by Matt Crandell servicing all of Metro Detroit.',
+      },
+    ],
+  },
 }
 </script>
 

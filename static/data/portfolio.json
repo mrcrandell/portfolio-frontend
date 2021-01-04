@@ -7,6 +7,12 @@
   "hoverImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail2.jpg"
 },
 {
+  "name": "Dodge Garage",
+  "slug": "dodge-garage",
+  "displayImg": "/img/portfolio/dodge-garage/thumbnail1.jpg",
+  "hoverImg": "/img/portfolio/dodge-garage/thumbnail2.jpg"
+},
+{
   "name": "Gregg's Gourmet Cafe",
   "slug": "greggs-gourmet-cafe",
   "city": "Clarkston",

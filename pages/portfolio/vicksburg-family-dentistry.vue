@@ -18,7 +18,7 @@
             /img/portfolio/vicksburg-family-dentistry/featured-img.jpg    1x,
             /img/portfolio/vicksburg-family-dentistry/featured-img@2x.jpg 2x
           "
-          alt="Anybody can make a website"
+          alt="Vicksburg Family Dentistry"
         />
       </template>
       <template #name>Vicksburg Family Dentistry</template>
@@ -81,6 +81,17 @@ export default {
         },
       ],
     }
+  },
+  head: {
+    title: 'Vicksburg Family Dentistry | Matt Crandell',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Website for Vicksburg Family Dentistry built by Matt Crandell using Vue.js.',
+      },
+    ],
   },
 }
 </script>

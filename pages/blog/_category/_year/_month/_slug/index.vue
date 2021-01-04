@@ -52,5 +52,17 @@ export default {
   mounted() {
     Prism.highlightAll()
   },
+  head() {
+    return {
+      title: `${this.post.title} | Matt Crandell`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.excerpt,
+        },
+      ],
+    }
+  },
 }
 </script>

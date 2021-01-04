@@ -235,6 +235,9 @@ export default {
       postCard: {},
     }
   },
+  head: {
+    title: 'Style Guide | Matt Crandell',
+  },
 }
 </script>
 <style scoped lang="scss">
