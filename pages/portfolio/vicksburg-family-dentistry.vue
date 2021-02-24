@@ -91,11 +91,6 @@ export default {
       ],
     }
   },
-  methods: {
-    viewMore() {
-      console.log('view more')
-    },
-  },
   head: {
     title: 'Vicksburg Family Dentistry | Matt Crandell',
     meta: [
