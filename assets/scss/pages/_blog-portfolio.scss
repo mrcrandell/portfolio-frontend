@@ -16,6 +16,9 @@ section.page {
     margin-bottom: 2rem;
   }
 }
+#portfolio-content {
+  height: $nav-height;
+}
 
 // Masthead
 .entry-masthead {
@@ -30,52 +33,11 @@ section.page {
   align-items: center;
   min-height: 90vh;
   padding: $nav-height 0 1rem;
+  margin-bottom: 3rem; // 48px
   @media (min-width: $grid-md) {
     min-height: 100vh;
-    margin-bottom: 3rem; // 48px
+    // margin-bottom: 3rem; // 48px
     padding: ($nav-height + 3rem) 0 3rem 0; // 72 + 48px / 48px
-  }
-  .featured-img {
-    &:before,
-    &:after {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '\020';
-      width: 100%;
-      height: 100%;
-    }
-    &:before {
-      background: $mostly-black;
-      mix-blend-mode: multiply;
-      opacity: 0.5;
-      z-index: 2;
-    }
-    &:after {
-      background: $sanmarino;
-      opacity: 0.5;
-      z-index: 3;
-      mix-blend-mode: hard-light;
-    }
-    img {
-      height: auto;
-      left: 50%;
-      max-width: 1000%;
-      min-height: 100%;
-      min-width: 100vw;
-      position: absolute;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      width: auto;
-      z-index: 1;
-      height: 100%;
-      left: 0;
-      object-fit: cover;
-      top: 0;
-      transform: none;
-      width: 100%;
-    }
   }
   .entry-header {
     position: relative;
@@ -94,7 +56,9 @@ section.page {
       color: #fff;
     }
     .entry-meta {
-      margin-bottom: 1rem;
+      > div {
+        margin-bottom: 1rem;
+      }
     }
     .entry-caption {
       font-size: 1.25rem; // 20px
@@ -134,6 +98,9 @@ section.page {
     width: 1em;
     height: 1em;
     margin-right: 0.25rem; // 4px
+  }
+  .btn-view-more-container {
+    width: 100%;
   }
 }
 

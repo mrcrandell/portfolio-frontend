@@ -24,11 +24,20 @@
       <template #name>Vicksburg Family Dentistry</template>
       <template #meta>
         <div>Vicksburg, MI</div>
-        <a href="https://www.vicksburgfamilydentistry.com" target="_blank"
+        <div class="btn-view-more-container">
+          <button
+            class="btn btn-outline-white"
+            @click="scrollIntoView('portfolio-content')"
+          >
+            View More
+          </button>
+        </div>
+        <!--<a href="https://www.vicksburgfamilydentistry.com" target="_blank"
           >View Website</a
-        >
+        >-->
       </template>
     </masthead>
+    <div id="portfolio-content"></div>
     <color-swatch
       v-for="colorSwatch in colorPalette"
       :key="colorSwatch.name"
@@ -81,6 +90,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    viewMore() {
+      console.log('view more')
+    },
   },
   head: {
     title: 'Vicksburg Family Dentistry | Matt Crandell',

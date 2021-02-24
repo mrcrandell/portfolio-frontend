@@ -1,5 +1,5 @@
 <template>
-  <div class="featured-img">
+  <div class="featured-img" :class="{ 'post-card-featured-img': isPostCard }">
     <picture v-if="featuredImg.src">
       <source media="(min-width: 992px)" :srcset="featuredImg.full.src" />
       <source media="(min-width: 576px)" :srcset="featuredImg.large.src" />
@@ -20,6 +20,10 @@ export default {
       default() {
         return {}
       },
+    },
+    isPostCard: {
+      type: Boolean,
+      default: false,
     },
   },
 }

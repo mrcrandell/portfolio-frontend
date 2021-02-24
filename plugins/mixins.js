@@ -35,5 +35,11 @@ Vue.mixin({
       // Check contrast
       return yiq >= 128 ? 'black' : 'white'
     },
+    scrollIntoView(destination) {
+      document.getElementById(destination).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    },
   },
 })

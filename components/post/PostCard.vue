@@ -5,7 +5,10 @@
       :to="post.link"
       class="featured-img-container"
     >
-      <post-featured-img :featured-img="post.featuredImg" />
+      <post-featured-img
+        :featured-img="post.featuredImg"
+        :is-post-card="true"
+      />
     </nuxt-link>
     <div class="blog-tile-content">
       <div class="entry-meta">

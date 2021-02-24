@@ -4,9 +4,8 @@
       <header class="page-header">
         <h1>Portfolio</h1>
         <p>
-          Crandell Design and Matt Crandell work with businesses of all sizes.
-          Check out some of the expert work that I have provided. Click on an
-          item below to see more.
+          I am a seasoned front end web developer with over ten years experience
+          working with everything from small businesses to large corporations.
         </p>
       </header>
       <div class="portfolio-grid">

@@ -224,15 +224,119 @@
           <div>Meta Data 1</div>
           <div>Meta Data 2</div>
         </template>
+        <template #caption>
+          This is an example of a caption / tagline for the masthead
+        </template>
       </masthead>
+    </div>
+    <div class="content">
+      <PortfolioCard :project="portfolioCard" />
+    </div>
+    <div class="content">
+      <postCard :post="postCard" />
     </div>
   </div>
 </template>
 <script>
+import PortfolioCard from '~/components/portfolio/PortfolioCard'
+import PostCard from '~/components/post/PostCard'
+
 export default {
+  components: {
+    PortfolioCard,
+    PostCard,
+  },
   data() {
     return {
-      postCard: {},
+      portfolioCard: {
+        name: 'Portfolio Card',
+        slug: 'greggs-gourmet-cafe',
+        city: 'City Name',
+        state: 'MI',
+        displayImg: '/img/portfolio/greggs-gourmet-cafe/thumbnail1.jpg',
+        hoverImg: '/img/portfolio/greggs-gourmet-cafe/thumbnail2.jpg',
+      },
+      postCard: {
+        title: 'Post Card',
+        link:
+          'https://dev-blog-api.mattcrandell.com/blog-api/raspberry-pi/2020/09/setting-up-a-raspberry-pi/',
+        date: new Date('2020-10-01T03:47:00.000Z'),
+        categories: [
+          {
+            id: 2,
+            link: '/blog/category/raspberry-pi',
+            name: 'Category Name',
+            slug: 'raspberry-pi',
+            taxonomy: 'category',
+            _links: {
+              self: [
+                {
+                  href:
+                    'https://dev-blog-api.mattcrandell.com/wp-json/wp/v2/categories/2',
+                },
+              ],
+              collection: [
+                {
+                  href:
+                    'https://dev-blog-api.mattcrandell.com/wp-json/wp/v2/categories',
+                },
+              ],
+              about: [
+                {
+                  href:
+                    'https://dev-blog-api.mattcrandell.com/wp-json/wp/v2/taxonomies/category',
+                },
+              ],
+              'wp:post_type': [
+                {
+                  href:
+                    'https://dev-blog-api.mattcrandell.com/wp-json/wp/v2/posts?categories=2',
+                },
+              ],
+              curies: [
+                {
+                  name: 'wp',
+                  href: 'https://api.w.org/{rel}',
+                  templated: true,
+                },
+              ],
+            },
+          },
+        ],
+        content: 'test content',
+        exceprt:
+          '<p>Simple collections of steps to set up a Raspberry Pi. I used a Raspberry Pi Zero W that will be used a weather dashboard. Setting up basics and node Update repos Install dependencies Install node and npm Test node is working Setting Up Apache and PHP More information: https://pimylifeup.com/raspberry-pi-apache/ To install apache2 on your Raspberry [&hellip;]</p>\n',
+        readTime: '8 min read',
+        featuredImg: {
+          alt: 'Raspberry Pi Zero W',
+          src:
+            'https://dev-blog-api.mattcrandell.com/wp-content/uploads/2020/09/setting-up-raspberry-pi.jpg',
+          thumbnail: {
+            src:
+              'https://dev-blog-api.mattcrandell.com/wp-content/uploads/2020/09/setting-up-raspberry-pi-150x150.jpg',
+            width: 150,
+            height: 150,
+          },
+          medium: {
+            src:
+              'https://dev-blog-api.mattcrandell.com/wp-content/uploads/2020/09/setting-up-raspberry-pi-300x129.jpg',
+            width: 300,
+            height: 129,
+          },
+          large: {
+            src:
+              'https://dev-blog-api.mattcrandell.com/wp-content/uploads/2020/09/setting-up-raspberry-pi-1024x439.jpg',
+            width: 1024,
+            height: 439,
+          },
+          full: {
+            src:
+              'https://dev-blog-api.mattcrandell.com/wp-content/uploads/2020/09/setting-up-raspberry-pi.jpg',
+            width: 1370,
+            height: 587,
+          },
+        },
+      },
     }
   },
   head: {
