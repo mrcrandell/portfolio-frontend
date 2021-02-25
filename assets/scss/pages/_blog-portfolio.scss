@@ -140,6 +140,40 @@ section.page {
   .token.cdata {
     color: #81a1c1;
   }
+  .portfolio-item-grid {
+    display: grid;
+    grid-gap: 2rem;
+    @media (min-width: $grid-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    > div {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    > p {
+      grid-column: 1/-1;
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      &.portfolio-img {
+        @include box-shadow(3);
+        &.portfolio-browser {
+          border-radius: 5px;
+        }
+      }
+    }
+    h2 {
+      margin-bottom: $spacer;
+    }
+  }
+  > .portfolio-item-grid {
+    max-width: 1430px;
+    margin: 0 auto 2rem auto;
+    padding: 30px;
+  }
 }
 
 // Bootstrap Classes
