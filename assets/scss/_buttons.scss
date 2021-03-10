@@ -1,7 +1,7 @@
 // Buttons
 .btn {
   display: inline-block;
-  font-family: $input-btn-font-family;
+  // font-family: $input-btn-font-family;
   // font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
@@ -107,6 +107,16 @@
     background-color: transparent;
   }
 }
+.btn-sm {
+  @include button-size(
+    $input-btn-padding-y-sm,
+    $input-btn-padding-x-sm,
+    $font-size-sm,
+    $input-btn-line-height
+  );
+}
+
+// Transitions
 .fade-enter-active,
 .fade-leave-active {
   @include transition(opacity 0.3s ease-in-out);

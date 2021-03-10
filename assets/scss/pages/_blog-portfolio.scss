@@ -16,8 +16,11 @@ section.page {
     margin-bottom: 2rem;
   }
 }
-#portfolio-content {
-  height: $nav-height;
+#skip-to-content {
+  height: $nav-height-sm;
+  @media (min-width: $grid-md) {
+    height: $nav-height;
+  }
 }
 
 // Masthead
@@ -63,6 +66,7 @@ section.page {
     .entry-caption {
       font-size: 1.25rem; // 20px
       font-weight: $headings-font-weight;
+      margin-bottom: 1rem;
       @media (min-width: $grid-md) {
         max-width: 50%;
       }
@@ -73,6 +77,9 @@ section.page {
         text-decoration: underline;
       }
     }
+  }
+  .project-container & {
+    margin-bottom: 0;
   }
 }
 
@@ -114,12 +121,7 @@ section.page {
     // margin: 2rem 0; // 32px 0
   }
   .entry-content {
-    max-width: $max-width;
-    padding: 0 1rem;
-    font-size: 1.25rem; // 20px
-    @media (min-width: $grid-md) {
-      padding: 0 4rem; // 64px
-    }
+    @include paragraph-sizing();
     h2 {
       margin-top: ($spacer * 3); // 48px;
       margin-bottom: ($spacer * 2); // 32px
@@ -150,10 +152,24 @@ section.page {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
+      &.full-width {
+        grid-column: 1/-1;
+        max-width: $max-width;
+        > p,
+        > ol,
+        > ul,
+        > .testimonial {
+          @include paragraph-sizing();
+        }
+      }
     }
-    > p {
+    > p,
+    > ol,
+    > ul,
+    > .testimonial {
       grid-column: 1/-1;
       margin-bottom: 0;
+      @include paragraph-sizing();
     }
     img {
       max-width: 100%;
@@ -180,6 +196,7 @@ section.page {
 .figure {
   // Ensures the caption's text aligns with the image.
   display: inline-block;
+  margin: 0 auto;
 }
 
 .figure-img {

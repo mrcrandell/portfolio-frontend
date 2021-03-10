@@ -19,7 +19,10 @@
         Anybody can make a website,<br />let me make you a better one!
       </h1>
       <div class="button-holder">
-        <a href="#portfolio" class="btn btn-outline-white page-scroll">
+        <button
+          class="btn btn-outline-white"
+          @click="scrollIntoView('portfolio')"
+        >
           See For Yourself
           <svg
             class="i-chevron-bottom"
@@ -34,7 +37,7 @@
           >
             <path d="M30 12 L16 24 2 12"></path>
           </svg>
-        </a>
+        </button>
       </div>
     </div>
   </section>

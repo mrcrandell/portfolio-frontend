@@ -24,14 +24,6 @@
       <template #name>Vicksburg Family Dentistry</template>
       <template #meta>
         <div>Vicksburg, MI</div>
-        <div class="btn-view-more-container">
-          <button
-            class="btn btn-outline-white"
-            @click="scrollIntoView('portfolio-content')"
-          >
-            View More
-          </button>
-        </div>
         <!--<a href="https://www.vicksburgfamilydentistry.com" target="_blank"
           >View Website</a
         >-->
@@ -92,7 +84,7 @@
             srcset="
               /img/portfolio/vicksburg-family-dentistry/mobile-homepage@2x.png 2x
             "
-            src="/img/portfolio/vicksburg-family-dentistry/mobile-homepage.png')}}"
+            src="/img/portfolio/vicksburg-family-dentistry/mobile-homepage.png"
             class="img-responsive center-block portfolio-img portfolio-browser"
             alt="Vicksburg Family Dentistry Website Homepage on Mobile"
           />

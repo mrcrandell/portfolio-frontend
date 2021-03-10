@@ -1,22 +1,46 @@
-[{
-  "name": "Vicksburg Family Dentistry",
-  "slug": "vicksburg-family-dentistry",
-  "city": "Vicksburg",
-  "state": "MI",
-  "displayImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail1.jpg",
-  "hoverImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail2.jpg"
-},
-{
-  "name": "Dodge Garage",
-  "slug": "dodge-garage",
-  "displayImg": "/img/portfolio/dodge-garage/thumbnail1.jpg",
-  "hoverImg": "/img/portfolio/dodge-garage/thumbnail2.jpg"
-},
-{
-  "name": "Gregg's Gourmet Cafe",
-  "slug": "greggs-gourmet-cafe",
-  "city": "Clarkston",
-  "state": "MI",
-  "displayImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail1.jpg",
-  "hoverImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail2.jpg"
-}]
+[
+  {
+    "name": "Dodge Garage",
+    "slug": "dodge-garage",
+    "displayImg": "/img/portfolio/dodge-garage/thumbnail1.jpg",
+    "hoverImg": "/img/portfolio/dodge-garage/thumbnail2.jpg"
+  },
+  {
+    "name": "Vicksburg Family Dentistry",
+    "slug": "vicksburg-family-dentistry",
+    "city": "Vicksburg",
+    "state": "MI",
+    "displayImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail1.jpg",
+    "hoverImg": "/img/portfolio/vicksburg-family-dentistry/thumbnail2.jpg"
+  },
+  {
+    "name": "McRiver Raid",
+    "slug": "mcriver-raid",
+    "displayImg": "http://placecorgi.com/600/360",
+    "hoverImg": "http://placecorgi.com/600/360"
+  },
+  {
+    "name": "Gregg's Gourmet Cafe",
+    "slug": "greggs-gourmet-cafe",
+    "city": "Clarkston",
+    "state": "MI",
+    "displayImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail1.jpg",
+    "hoverImg": "/img/portfolio/greggs-gourmet-cafe/thumbnail2.jpg"
+  },
+  {
+    "name": "Habitat for Humanity of Oakland County",
+    "slug": "habitat-for-humanity-of-oakland-county",
+    "city": "Pontiac",
+    "state": "MI",
+    "displayImg": "/img/portfolio/habitat-for-humanity-of-oakland-county/thumbnail1.jpg",
+    "hoverImg": "/img/portfolio/habitat-for-humanity-of-oakland-county/thumbnail2.jpg"
+  },
+  {
+    "name": "Four Green Fields Farm",
+    "slug": "four-green-fields-farm",
+    "city": "Rodney",
+    "state": "MI",
+    "displayImg": "/img/portfolio/four-green-fields-farm/thumbnail1.jpg",
+    "hoverImg": "/img/portfolio/four-green-fields-farm/thumbnail2.jpg"
+  }
+]

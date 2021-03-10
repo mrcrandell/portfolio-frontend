@@ -16,8 +16,11 @@
     </div>
     <div class="info">
       <div class="client-name">{{ project.name }}</div>
-      <div v-if="project.city" class="client-location">
-        {{ project.city }}, {{ project.state }}
+      <div class="project-meta">
+        <div v-if="project.city" class="client-location">
+          {{ project.city }}, {{ project.state }}
+        </div>
+        <button class="btn btn-sm btn-primary">View Project</button>
       </div>
     </div>
   </nuxt-link>
@@ -80,9 +83,17 @@ export default {
       margin-bottom: 0.5rem;
       flex: 1;
     }
+    .project-meta,
     .client-location {
       font-size: 0.875rem; // 14px
       color: $middle-gray;
+    }
+    .project-meta {
+      display: flex;
+      align-items: center;
+      > *:not(.client-location) {
+        margin-left: auto;
+      }
     }
   }
   &:hover {
@@ -97,6 +108,9 @@ export default {
         visibility: visible;
         transform: scale(1.05);
       }
+    }
+    .btn {
+      background-color: $goblin;
     }
   }
 }

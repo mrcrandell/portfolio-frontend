@@ -13,6 +13,27 @@
       <div v-if="isCaptionNotEmpty" class="entry-caption">
         <slot name="caption"></slot>
       </div>
+      <div class="btn-view-more-container">
+        <button
+          class="btn btn-outline-white"
+          @click="scrollIntoView('skip-to-content')"
+        >
+          View More
+          <svg
+            class="i-chevron-bottom"
+            viewBox="0 0 32 32"
+            width="12"
+            height="12"
+            fill="none"
+            stroke="currentcolor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M30 12 L16 24 2 12"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 </template>

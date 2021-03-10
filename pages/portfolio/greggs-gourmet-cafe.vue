@@ -32,17 +32,78 @@
         the client to update.
       </template>
     </masthead>
-    <p>
-      The website for Gregg's Gourmet Cafe was built using WordPress with a
-      theme built using the
-      <a href="https://roots.io/sage/" target="_blank">Sage</a> theme framework.
-      I also created a custom plugin to assist with user navigation.
-    </p>
-    <color-swatch
-      v-for="colorSwatch in colorPalette"
-      :key="colorSwatch.name"
-      :color-swatch="colorSwatch"
-    ></color-swatch>
+    <div id="skip-to-content"></div>
+    <div class="portfolio-item-grid">
+      <p>
+        The website for Gregg's Gourmet Cafe was built using WordPress with a
+        theme built using the
+        <a href="https://roots.io/sage/" target="_blank">Sage</a> theme
+        framework. I also created a custom plugin to assist with user
+        navigation.
+      </p>
+      <div>
+        <img
+          srcset="/img/portfolio/greggs-gourmet-cafe/demo@2x.jpg 2x"
+          src="/img/portfolio/greggs-gourmet-cafe/demo.jpg"
+          class="portfolio-img"
+          alt="Gregg's Gourmet Cafe demo"
+        />
+      </div>
+      <div>
+        <h2>Techinical Features</h2>
+        <h3>Custom WordPress Theme</h3>
+        <p>
+          Sage is a productivity-driven WordPress starter theme built with
+          Laravel. The theme for for this website was then built upon that. This
+          allowed me a great starting point to develop the design of the site
+          with ease ultilizing tools like Sass.
+        </p>
+        <p>
+          <a
+            href="https://github.com/crandelldesign/greggsgourmetcafe"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >See the Source Code</a
+          >
+        </p>
+        <h3>Custome WordPress Plugin</h3>
+        <p>
+          At least according to Sage, site outside of the theme should to be
+          kept in separate plugins. I created a breadcrumbs plugin to help with
+          user navigation within the menu pages. I then created a plugin that
+          automatically creates a list of child pages for whatever page it is
+          used on (removing the need to keep things up to date by hand).
+        </p>
+        <p>
+          <a
+            href="https://github.com/crandelldesign/greggsgourmetcafe-plugin"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >See the Source Code</a
+          >
+        </p>
+      </div>
+      <div>
+        <h2>Color Scheme</h2>
+        <div class="color-swatches">
+          <color-swatch
+            v-for="colorSwatch in colorPalette"
+            :key="colorSwatch.name"
+            :color-swatch="colorSwatch"
+          ></color-swatch>
+        </div>
+      </div>
+      <div>
+        <h2>Typography</h2>
+        <img
+          src="/img/portfolio/greggs-gourmet-cafe/typography.jpg"
+          class="portfolio-img"
+          alt="Gregg's Gourmet Cafe Website Typography"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script>

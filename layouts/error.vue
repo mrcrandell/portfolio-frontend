@@ -11,7 +11,7 @@
         one of the links below:
       </p>
       <p v-else>
-        Whoa, so something went wrong. PLease try one of the links below:
+        Whoa, so something went wrong. Please try one of the links below:
       </p>
       <LayoutNav />
     </div>
