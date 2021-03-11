@@ -58,6 +58,11 @@ export default {
   // Proxies /graphql to http://localhost:3001/graphql
   // We tell the graphql client to connect to host:sameport/graphql to not get cors protection
   // Then we proxy it locally to the real graphql server that is located on the ports below.
-  '/blog-api': { target: process.env.BLOG_API_URL, ws: true },
+    '/blog-api': { 
+      target: process.env.BLOG_API_URL, 
+      ws: true,
+      changeOrigin: true,
+      pathRewrite: {'^/blog-api' : '/'}
+    },
   },
 }
