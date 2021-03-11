@@ -20,6 +20,8 @@ jobs:
       #        run: npm run build
       #      - name: Create Deployment Folder
       #        run: mkdir deploy && cp -r .nuxt deploy/.nuxt && cp -r node_modules deploy/node_modules && cp -r static deploy/static && cp -r assets deploy/assets
+      - name: Remove Some Files
+        run: rm -fr .??*
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
