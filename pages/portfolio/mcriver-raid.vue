@@ -13,10 +13,10 @@
         <img
           loading="lazy"
           class="img-fluid"
-          src="http://placecorgi.com/1920/1080"
+          src="https://source.unsplash.com/1920x1080/?corgi"
           srcset="
-            http://placecorgi.com/1920/1080 1x,
-            http://placecorgi.com/1920/1080 2x
+            https://source.unsplash.com/1920x1080/?corgi 1x,
+            https://source.unsplash.com/1920x1080/?corgi 2x
           "
           alt="McRiver Raid"
         />
@@ -43,7 +43,7 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="http://placecorgi.com/1000/1751"
+            src="https://source.unsplash.com/1000x1751/?corgi"
             alt="Order Form"
           />
           <figcaption class="figure-caption">Order Form</figcaption>
@@ -51,7 +51,7 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="http://placecorgi.com/1000/1751"
+            src="https://source.unsplash.com/1000x1751/?corgi"
             alt="Order Form with Dropdown Expanded"
           />
           <figcaption class="figure-caption">
@@ -63,7 +63,7 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="http://placecorgi.com/1000/1751"
+            src="https://source.unsplash.com/1000x1751/?corgi"
             alt="Order Summary - Login"
           />
           <figcaption class="figure-caption">Order Summary - Login</figcaption>
@@ -71,7 +71,7 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="http://placecorgi.com/1000/1751"
+            src="https://source.unsplash.com/1000x1751/?corgi"
             alt="Order Summary - Credit Card"
           />
           <figcaption class="figure-caption">
@@ -102,7 +102,7 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="http://placecorgi.com/1920/1080"
+            src="https://source.unsplash.com/1920x1080/?corgi"
             alt="Admin Order View"
           />
           <figcaption class="figure-caption">Admin Order View</figcaption>

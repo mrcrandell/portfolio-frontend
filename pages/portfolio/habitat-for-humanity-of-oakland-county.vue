@@ -13,10 +13,10 @@
         <img
           loading="lazy"
           class="img-fluid"
-          src="http://placecorgi.com/1920/1080"
+          src="https://source.unsplash.com/1920x1080/?corgi"
           srcset="
-            http://placecorgi.com/1920/1080 1x,
-            http://placecorgi.com/1920/1080 2x
+            https://source.unsplash.com/1920x1080/?corgi 1x,
+            https://source.unsplash.com/1920x1080/?corgi 2x
           "
           alt="Habitat for Humanity of Oakland County"
         />
@@ -50,8 +50,8 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Critical Home Repair Application"
             />
@@ -61,8 +61,8 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Homeownership Program Landing Page"
             />
@@ -88,8 +88,8 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Homepage News and Events Section"
             />
@@ -99,8 +99,8 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="News and Events Landing Page"
             />
@@ -120,8 +120,8 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Homepage Newsletter Signup"
             />
@@ -131,8 +131,8 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Restore Newsletter Signup"
             />

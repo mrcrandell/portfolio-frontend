@@ -50,7 +50,7 @@
           <figure class="figure">
             <img
               class="figure-img portfolio-img"
-              src="http://placecorgi.com/1000/1751"
+              src="https://source.unsplash.com/1000x1751/?corgi"
               alt="Login"
             />
             <figcaption class="figure-caption">Login</figcaption>
@@ -58,7 +58,7 @@
           <figure class="figure">
             <img
               class="figure-img portfolio-img"
-              src="http://placecorgi.com/1000/1751"
+              src="https://source.unsplash.com/1000x1751/?corgi"
               alt="Register"
             />
             <figcaption class="figure-caption">Register</figcaption>
@@ -105,8 +105,8 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img"
               alt="Onsite Simulators"
             />
@@ -114,8 +114,8 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="Leaderboard for Racers"
             />
@@ -171,8 +171,8 @@
           </div>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="My Garage"
             />
@@ -180,8 +180,8 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="http://placecorgi.com/2000/1235 2x"
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               class="figure-img portfolio-img portfolio-browser"
               alt="My Slip"
             />
@@ -194,7 +194,8 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               alt="Racing HQ Landing Page"
               class="figure-img portfolio-img portfolio-browser"
             />
@@ -206,7 +207,8 @@
           </figure>
           <figure class="figure">
             <img
-              src="http://placecorgi.com/2000/1235"
+              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
+              src="https://source.unsplash.com/2000x1235/?corgi"
               alt="Racing HQ Track Locator Page"
               class="figure-img portfolio-img portfolio-browser"
             />
@@ -262,15 +264,6 @@
           ></color-swatch>
         </div>
       </div>
-      <!-- <div>
-        <h2>Typography</h2>
-        <img
-          srcset="http://placecorgi.com/2000/1235 2x"
-          src="http://placecorgi.com/2000/1235"
-          alt="Typography"
-          class="portfolio-img"
-        />
-      </div> -->
     </div>
   </div>
 </template>
