@@ -48,3 +48,4 @@ jobs:
             cd /var/www/portfolio/frontend-dev
             npm install
             npm run build
+            pm2 reload PortfolioDev
