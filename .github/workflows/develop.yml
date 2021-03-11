@@ -42,4 +42,4 @@ jobs:
           script: |
             cd /var/www/portfolio/frontend-dev
             npm install
-            npm build
+            npm run build
