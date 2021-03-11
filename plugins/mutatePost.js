@@ -6,11 +6,11 @@ export default ({ app }, inject) => {
     post.title = postData.title.rendered
     // http://blog-api.mattcrandell.test/blog-api/uncategorized/2020/11/hello-world/
     post.link = postData.link.replace(
-      `${process.env.BLOG_API_URL}/blog-api`,
+      `${process.env.APP_URL}/blog-api`,
       '/blog'
     )
     post.originalLink = postData.link
-    post.apiUrl = `${process.env.BLOG_API_URL}/blog-api`
+    post.apiUrl = `${process.env.APP_URL}/blog-api`
     post.date = new Date(postData.date)
     // Mutate Categories
     post.categories = postData._embedded['wp:term'][0].filter(

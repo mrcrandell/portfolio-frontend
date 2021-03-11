@@ -28,7 +28,7 @@ export default {
     // Get category data if needed
     if (!store.state.categories) {
       const categoryResponse = await app.$axios.get(
-        `${process.env.BLOG_API_URL}/wp-json/wp/v2/categories?per_page=100`
+        `${process.env.APP_URL}/blog-api/wp-json/wp/v2/categories?per_page=100`
       )
       store.commit('setCategories', categoryResponse.data)
     }
@@ -43,7 +43,7 @@ export default {
     }
     // Get posts
     const { data, headers } = await app.$axios.get(
-      `${process.env.BLOG_API_URL}/wp-json/wp/v2/posts?orderby=date&per_page=10&_embed`,
+      `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts?orderby=date&per_page=10&_embed`,
       {
         params: getParams,
       }

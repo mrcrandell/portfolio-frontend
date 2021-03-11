@@ -38,7 +38,7 @@ export default {
   },
   async asyncData({ app, params, $mutatePost }) {
     const { data } = await app.$axios.get(
-      `${process.env.BLOG_API_URL}/wp-json/wp/v2/posts`,
+      `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts`,
       {
         params: {
           slug: params.slug,
