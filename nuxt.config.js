@@ -17,7 +17,10 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
-  serverMiddleware: [{ path: "/blog-api", handler: "~/server-middleware/blog-api.js" }, '~/middleware/seo'],
+  serverMiddleware: [
+    // { path: "/blog-api", handler: "~/server-middleware/blog-api.js" }, 
+    '~/middleware/seo'
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
@@ -36,7 +39,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/style-resources', '@nuxtjs/proxy'],
 
   axios: {},
 
@@ -48,5 +51,13 @@ export default {
       'assets/scss/_variables.scss',
       'assets/scss/_mixins.scss'
     ]
-  }
+  },
+
+  // Proxy
+  proxy: {
+  // Proxies /graphql to http://localhost:3001/graphql
+  // We tell the graphql client to connect to host:sameport/graphql to not get cors protection
+  // Then we proxy it locally to the real graphql server that is located on the ports below.
+  '/blog-api': { target: process.env.BLOG_API_URL, ws: true },
+  },
 }

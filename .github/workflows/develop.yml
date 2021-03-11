@@ -25,7 +25,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
         with:
-          envkey_BLOG_API_URL: 'https://dev-blog-api.mattcrandell.com'
+          envkey_BLOG_API_URL: 'https://dev.mattcrandell.com/blog-api'
           envkey_APP_URL: 'https://dev.mattcrandell.com'
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
