@@ -14,9 +14,7 @@ export default {
     Portfolio,
   },
   async asyncData({ app }) {
-    const { data } = await app.$axios.get(
-      `${process.env.APP_URL}/data/portfolio.json`
-    )
+    const { data } = await app.$axios.get(`/data/portfolio.json`)
     // const projects = projectsData
     // eslint-disable-next-line
     // console.log(data)
