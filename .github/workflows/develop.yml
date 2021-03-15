@@ -27,6 +27,8 @@ jobs:
         with:
           envkey_BLOG_API_URL: 'https://dev-blog-api.mattcrandell.com'
           envkey_APP_URL: 'https://dev.mattcrandell.com'
+          envkey_INVISIBLE_RECAPTCHA_SITEKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SITEKEY }}
+          envkey_INVISIBLE_RECAPTCHA_SECRETKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SECRETKEY }}
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
