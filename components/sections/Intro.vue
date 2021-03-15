@@ -42,3 +42,8 @@
     </div>
   </section>
 </template>
+<style lang="scss" scoped>
+img {
+  min-width: none;
+}
+</style>
