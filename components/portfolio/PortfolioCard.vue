@@ -89,10 +89,15 @@ export default {
       color: $middle-gray;
     }
     .project-meta {
-      display: flex;
-      align-items: center;
-      > *:not(.client-location) {
-        margin-left: auto;
+      .client-location {
+        margin-bottom: 0.25rem; // 4px
+      }
+      @media (min-width: $grid-md) {
+        display: flex;
+        align-items: center;
+        > *:not(.client-location) {
+          margin-left: auto;
+        }
       }
     }
   }
