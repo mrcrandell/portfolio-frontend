@@ -43,7 +43,7 @@
   </section>
 </template>
 <style lang="scss" scoped>
-img {
-  min-width: none;
+#intro .featured-img:not(.post-card-featured-img) img {
+  min-width: 0;
 }
 </style>
