@@ -2,16 +2,19 @@
   <div class="home-container">
     <Intro />
     <Portfolio :projects="projects" />
+    <SectionContact />
   </div>
 </template>
 
 <script>
 import Intro from '~/components/sections/Intro'
 import Portfolio from '~/components/sections/Portfolio'
+import SectionContact from '~/components/SectionContact'
 export default {
   components: {
     Intro,
     Portfolio,
+    SectionContact,
   },
   async asyncData({ app }) {
     const { data } = await app.$axios.get(

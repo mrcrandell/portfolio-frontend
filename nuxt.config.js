@@ -39,7 +39,13 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/style-resources', '@nuxtjs/proxy'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/proxy',
+    '@nuxtjs/recaptcha',
+  ],
 
   axios: {},
 
@@ -64,5 +70,19 @@ export default {
       changeOrigin: true,
       pathRewrite: {'^/blog-api' : '/'}
     },
+    '/api': { 
+      target: 'http://crandelldesign.test', 
+      ws: true,
+      changeOrigin: true,
+      pathRewrite: {'^/api' : '/'}
+    },
   },
+
+  // ReCaptcha
+  recaptcha: {
+    /* reCAPTCHA options */
+    hideBadge: true,
+    siteKey: process.env.INVISIBLE_RECAPTCHA_SITEKEY,
+    version: 3
+  }
 }
