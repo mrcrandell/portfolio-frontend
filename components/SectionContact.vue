@@ -107,7 +107,7 @@
           <p>Phone <a href="tel:+12483835376">248-383-5376</a></p>
           <p>
             Email
-            <a href="mailto:matt@crandelldesign.com">matt@crandelldesign.com</a>
+            <a href="mailto:me@mattcrandell.com">me@mattcrandell.com</a>
           </p>
           <h3>Matt Crandell's R&eacute;sum&eacute;</h3>
           <p>

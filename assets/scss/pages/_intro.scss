@@ -5,13 +5,14 @@
   overflow-y: auto;
   //padding-top: $heading-height-lg;
   // background: $rhino url(/img/home-container-bg-mobile.jpg) no-repeat center center;
-  background: $rhino no-repeat center center fixed;
+  background: $rhino;
   // background-size: cover;
   /* background-image: url('~assets/img/intro-wallpaper.jpg');
   background-image: image-set(
     url('~assets/img/intro-wallpaper.jpg') 1x,
     url('~assets/img/intro-wallpaper@2x.jpg') 2x
   );*/
+  padding: $nav-height 0 1rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
