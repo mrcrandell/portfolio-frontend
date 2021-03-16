@@ -1,98 +1,127 @@
 <template>
   <section id="contact" class="page">
-    <h1>Contact</h1>
-    <form method="post" @submit.prevent="submitForm($event)">
-      <div
-        v-if="alert.show"
-        class="alert"
-        role="alert"
-        :class="'alert-' + alert.status"
-      >
-        {{ alert.message }}
-      </div>
-      <div class="form-group">
-        <label for="contact-name">Name</label>
-        <input
-          id="contact-name"
-          v-model="name"
-          type="text"
-          class="form-control"
-          name="name"
-          :class="{ 'is-invalid': errors.name }"
-          placeholder="Name"
-        />
-        <template v-if="errors.name">
+    <div class="content">
+      <header class="page-header">
+        <h1>Contact</h1>
+        <p>
+          While I am not currently looking for new opportunities, I'd still love
+          to hear from you. Whether you have a question or just want to say hi,
+          use the form below and I'll get back with you.
+        </p>
+      </header>
+      <div class="contact-grid">
+        <form method="post" @submit.prevent="submitForm($event)">
           <div
-            v-for="message in errors.name.messages"
-            :key="message"
-            class="invalid-feedback"
+            v-if="alert.show"
+            class="alert"
+            role="alert"
+            :class="'alert-' + alert.status"
           >
-            {{ message }}
+            {{ alert.message }}
           </div>
-        </template>
-      </div>
-      <div class="form-group">
-        <label for="contact-email">Email</label>
-        <input
-          id="contact-email"
-          v-model="email"
-          type="email"
-          class="form-control"
-          name="email"
-          :class="{ 'is-invalid': errors.email }"
-          placeholder="Email"
-        />
-        <template v-if="errors.email">
-          <div
-            v-for="message in errors.email.messages"
-            :key="message"
-            class="invalid-feedback"
-          >
-            {{ message }}
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              v-model="name"
+              type="text"
+              class="form-control"
+              name="name"
+              :class="{ 'is-invalid': errors.name }"
+              placeholder="Name"
+            />
+            <template v-if="errors.name">
+              <div
+                v-for="message in errors.name.messages"
+                :key="message"
+                class="invalid-feedback"
+              >
+                {{ message }}
+              </div>
+            </template>
           </div>
-        </template>
-      </div>
-      <div class="form-group">
-        <label for="message-text">Name</label>
-        <textarea
-          id="message-text"
-          v-model="message_text"
-          name="message_text"
-          class="form-control"
-          rows="6"
-          :class="{ 'is-invalid': errors.message_text }"
-          placeholder="Enter Message"
-        ></textarea>
-        <template v-if="errors.message_text">
-          <div
-            v-for="message in errors.message_text.messages"
-            :key="message"
-            class="invalid-feedback"
-          >
-            {{ message }}
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              v-model="email"
+              type="email"
+              class="form-control"
+              name="email"
+              :class="{ 'is-invalid': errors.email }"
+              placeholder="Email"
+            />
+            <template v-if="errors.email">
+              <div
+                v-for="message in errors.email.messages"
+                :key="message"
+                class="invalid-feedback"
+              >
+                {{ message }}
+              </div>
+            </template>
           </div>
-        </template>
+          <div class="form-group">
+            <label for="message-text">Name</label>
+            <textarea
+              id="message-text"
+              v-model="message_text"
+              name="message_text"
+              class="form-control"
+              rows="6"
+              :class="{ 'is-invalid': errors.message_text }"
+              placeholder="Enter Message"
+            ></textarea>
+            <template v-if="errors.message_text">
+              <div
+                v-for="message in errors.message_text.messages"
+                :key="message"
+                class="invalid-feedback"
+              >
+                {{ message }}
+              </div>
+            </template>
+          </div>
+          <div class="form-group">
+            <small
+              >This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy">Privacy Policy</a>
+              and
+              <a href="https://policies.google.com/terms">Terms of Service</a>
+              apply.
+            </small>
+          </div>
+          <div class="form-group form-group-submit">
+            <button
+              type="submit"
+              class="btn btn-submit btn-primary"
+              :disabled="isLoading"
+            >
+              <transition name="slide-fade" mode="out-in">
+                <span :key="submitText">{{ submitText }}</span>
+              </transition>
+            </button>
+          </div>
+        </form>
+        <div class="contact-info">
+          <p>Phone <a href="tel:+12483835376">248-383-5376</a></p>
+          <p>
+            Email
+            <a href="mailto:matt@crandelldesign.com">matt@crandelldesign.com</a>
+          </p>
+          <h3>Matt Crandell's R&eacute;sum&eacute;</h3>
+          <p>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              class="btn btn-primary"
+              title="Download Matt Crandell's R&eacute;sum&eacute; as PDF"
+              >Download My R&eacute;sum&eacute;</a
+            >
+          </p>
+        </div>
       </div>
-      <div class="form-group">
-        <small
-          >This site is protected by reCAPTCHA and the Google
-          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-          <a href="https://policies.google.com/terms">Terms of Service</a>
-          apply.
-        </small>
-      </div>
-      <div class="form-group form-group-submit">
-        <button
-          type="submit"
-          class="btn btn-submit btn-primary"
-          :disabled="isLoading"
-        >
-          <transition name="slide-fade" mode="out-in">
-            <span :key="submitText">{{ submitText }}</span>
-          </transition>
-        </button>
-      </div>
-    </form>
+    </div>
   </section>
 </template>
 <script>
@@ -230,3 +259,42 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+section#contact {
+  background: $rhino no-repeat center center fixed;
+  color: #fff;
+  h1,
+  h2 {
+    color: #fff;
+  }
+  .page-header {
+    border-color: #fff;
+  }
+}
+.contact-grid {
+  display: grid;
+  grid-gap: 2rem;
+  @media (min-width: $grid-md) {
+    grid-template-columns: 60% 1fr;
+  }
+}
+.contact-info {
+  padding-top: 29px;
+  p {
+    font-size: 1.25rem; // 20px
+    margin-bottom: $paragraph-margin-bottom / 2;
+    @media (min-width: $grid-lg) {
+      font-size: 1.5625rem; // 25px
+    }
+    a:not(.btn) {
+      display: inline-block;
+      padding: 0 0.5rem;
+      color: #fff;
+      font-weight: $font-weight-normal;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+</style>

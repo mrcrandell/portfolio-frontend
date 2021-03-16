@@ -1,29 +1,43 @@
 <template>
   <div class="home-container">
-    <Intro />
-    <Portfolio :projects="projects" />
+    <SectionIntro />
+    <SectionPortfolio :projects="projects" />
+    <SectionAbout />
+    <SectionBlog :posts="posts" />
     <SectionContact />
   </div>
 </template>
 
 <script>
-import Intro from '~/components/sections/Intro'
-import Portfolio from '~/components/sections/Portfolio'
+import SectionIntro from '~/components/SectionIntro'
+import SectionPortfolio from '~/components/SectionPortfolio'
 import SectionContact from '~/components/SectionContact'
+import SectionAbout from '~/components/SectionAbout'
+import SectionBlog from '~/components/SectionBlog'
 export default {
   components: {
-    Intro,
-    Portfolio,
+    SectionIntro,
+    SectionPortfolio,
     SectionContact,
+    SectionAbout,
+    SectionBlog,
   },
-  async asyncData({ app }) {
-    const { data } = await app.$axios.get(
+  async asyncData({ app, $mutatePost }) {
+    const projects = await app.$axios.get(
       `${process.env.APP_URL}/data/portfolio.json`
     )
-    // const projects = projectsData
-    // eslint-disable-next-line
-    // console.log(data)
-    return { projects: data }
+
+    // Get posts
+    const { data } = await app.$axios.get(
+      `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts?orderby=date&per_page=2&_embed`
+    )
+    const posts = []
+    data.forEach((postData) => {
+      const post = $mutatePost(postData)
+      posts.push(post)
+    })
+
+    return { projects: projects.data, posts }
   },
   head: {
     title: "Matt Crandell's Portfolio | Web Developer",

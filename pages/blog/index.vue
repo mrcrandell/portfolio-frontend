@@ -95,6 +95,7 @@ Hover with slight zoom of image (similier to portfolio). */
   max-width: $max-width;
   margin: 0 auto;
   //padding: 0 30px;
+  padding-bottom: 2rem;
   @media (min-width: $grid-lg) {
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, minmax(0, 1fr));

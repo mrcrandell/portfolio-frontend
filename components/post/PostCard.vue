@@ -70,6 +70,19 @@ export default {
   a.featured-img-container {
     display: block;
     overflow: hidden;
+    ::v-deep .featured-img {
+      display: flex;
+      width: 100%;
+      max-height: 150px;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $grid-md) {
+        max-height: none;
+      }
+      picture {
+        width: 100%;
+      }
+    }
     ::v-deep img {
       width: 100%;
       @include transition(all 0.3s ease-in-out);
@@ -85,10 +98,13 @@ export default {
     }
   }
   .entry-title {
-    font-size: $h2-font-size;
+    font-size: 1.5rem; // 24px
     color: $black;
     margin-bottom: 0.5rem;
     flex: 1;
+    @media (min-width: $grid-md) {
+      font-size: $h2-font-size;
+    }
   }
   .entry-meta {
     display: flex;
