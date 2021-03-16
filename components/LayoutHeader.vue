@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'is-hidden': !isHeaderShown }">
     <div class="container">
       <div class="logo-container">
         <nuxt-link to="/">
@@ -10,6 +10,38 @@
     </div>
   </header>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      isHeaderShown: true,
+      lastScrollPosition: 0,
+      scrollOffset: 40,
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      if (window.pageYOffset < 0) {
+        return
+      }
+      if (
+        Math.abs(window.pageYOffset - this.lastScrollPosition) <
+        this.scrollOffset
+      ) {
+        return
+      }
+      this.isHeaderShown = window.pageYOffset < this.lastScrollPosition
+      this.lastScrollPosition = window.pageYOffset
+    },
+  },
+}
+</script>
 <style scoped lang="scss">
 @import '@/assets/scss/variables';
 @import '@/assets/scss/mixins';
@@ -22,6 +54,8 @@ header.header {
   left: 0;
   z-index: 20;
   border-bottom: 1px solid $sanmarino;
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-out;
   @include box_shadow(3);
   > .container {
     display: flex;
@@ -65,7 +99,11 @@ header.header {
         list-style: none;
         height: 100%;
         align-items: center;
-        a {
+        a,
+        button {
+          @extend a;
+          border: 0;
+          background: transparent;
           display: block;
           padding: 0.5rem 0.0625rem;
           @media (min-width: $grid-md) {
@@ -74,6 +112,10 @@ header.header {
         }
       }
     }
+  }
+  &.is-hidden {
+    box-shadow: none;
+    transform: translate3d(0, -100%, 0);
   }
 }
 </style>
