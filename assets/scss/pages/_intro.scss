@@ -1,6 +1,7 @@
 // Home
 #intro,
 #portfolio-intro {
+  position: relative;
   overflow-x: hidden;
   overflow-y: auto;
   //padding-top: $heading-height-lg;
@@ -12,7 +13,6 @@
     url('~assets/img/intro-wallpaper.jpg') 1x,
     url('~assets/img/intro-wallpaper@2x.jpg') 2x
   );*/
-  padding: $nav-height 0 1rem;
   min-height: 100vh;
   display: flex;
   align-items: center;

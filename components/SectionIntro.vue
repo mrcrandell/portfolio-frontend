@@ -16,7 +16,7 @@
     </div>
     <div class="content">
       <h1 class="slogan heading">
-        Anybody can make a website,<br />let me make you a better one!
+        Anybody can make a website, <br />let me make you a better one!
       </h1>
       <div class="button-holder">
         <button
