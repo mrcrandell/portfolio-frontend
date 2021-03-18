@@ -11,6 +11,24 @@
           :post="post"
         ></post-card>
       </div>
+      <div class="btn-read-more-container">
+        <nuxt-link to="/blog" class="btn btn-primary">
+          Read More Articles
+          <svg
+            id="i-chevron-right"
+            viewBox="0 0 32 32"
+            width="12"
+            height="12"
+            fill="none"
+            stroke="currentcolor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M12 30 L24 16 12 2" />
+          </svg>
+        </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -57,5 +75,9 @@ export default {
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+.btn-read-more-container {
+  margin: 2rem auto 0 auto;
+  text-align: center;
 }
 </style>
