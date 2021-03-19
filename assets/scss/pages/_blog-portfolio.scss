@@ -122,6 +122,10 @@ section.page {
   }
   .entry-content {
     @include paragraph-sizing();
+    @media (min-width: ($max-width + 192px)) {
+      margin-left: auto;
+      margin-right: auto;
+    }
     h2 {
       margin-top: ($spacer * 3); // 48px;
       margin-bottom: ($spacer * 2); // 32px
