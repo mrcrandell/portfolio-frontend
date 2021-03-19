@@ -87,13 +87,18 @@ Hover with slight zoom of image (similier to portfolio). */
 @import '@/assets/scss/mixins';
 .blog-index-container {
   padding: ($nav-height + 3rem) 2rem 0 2rem;
+  > * {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .blog-grid {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
-  max-width: $max-width;
-  margin: 0 auto;
+  // max-width: $max-width;
+  // margin: 0 auto;
   //padding: 0 30px;
   padding-bottom: 2rem;
   @media (min-width: $grid-lg) {
