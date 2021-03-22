@@ -1,7 +1,19 @@
 <template>
   <section id="about" class="page">
     <div class="content">
-      <div><img src="/img/matt-crandell.jpg" alt="Matt Crandell" /></div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="~assets/img/matt-crandell.webp" />
+          <img
+            src="~assets/img/matt-crandell.jpg"
+            srcset="
+              ~assets/img/matt-crandell.jpg    1x,
+              ~assets/img/matt-crandell@2x.jpg 2x
+            "
+            alt="Matt Crandell"
+          />
+        </picture>
+      </div>
       <div>
         <header class="page-header">
           <h1>Hi, I'm Matt Crandell</h1>

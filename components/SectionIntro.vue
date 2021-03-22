@@ -2,6 +2,11 @@
   <section id="intro" class="page">
     <div class="featured-img">
       <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 992px)"
+          srcset="~assets/img/intro-wallpaper.webp"
+        />
         <img
           loading="lazy"
           class="img-fluid"
