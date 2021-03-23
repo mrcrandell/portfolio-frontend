@@ -4,12 +4,12 @@
       <picture>
         <source
           type="image/webp"
-          media="(max-width: 768px)"
+          media="(max-width: 767px)"
           srcset="~assets/img/section-about/about-wallpaper-sm.webp"
         />
         <source
           type="image/jpg"
-          media="(max-width: 768px)"
+          media="(max-width: 767px)"
           srcset="
             ~assets/img/section-about/about-wallpaper-sm.jpg    1x,
             ~assets/img/section-about/about-wallpaper-sm@2x.jpg 2x
@@ -22,7 +22,7 @@
         />
         <source
           type="image/jpg"
-          media="(mix-width: 768px)"
+          media="(min-width: 768px)"
           srcset="
             ~assets/img/section-about/about-wallpaper.jpg    1x,
             ~assets/img/section-about/about-wallpaper@2x.jpg 2x

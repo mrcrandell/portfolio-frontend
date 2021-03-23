@@ -3,6 +3,11 @@
     <div class="featured-img">
       <picture>
         <source
+          type="image/webp"
+          media="(max-width: 768px)"
+          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+        />
+        <source
           type="image/jpg"
           media="(max-width: 768px)"
           srcset="
@@ -12,22 +17,21 @@
         />
         <source
           type="image/webp"
-          media="(max-width: 768px)"
+          media="(min-width: 768px)"
           srcset="~assets/img/section-contact/contact-wallpaper.webp"
         />
         <source
-          type="image/webp"
+          type="image/jpg"
           media="(min-width: 768px)"
-          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+          srcset="
+            ~assets/img/section-contact/contact-wallpaper.jpg    1x,
+            ~assets/img/section-contact/contact-wallpaper@2x.jpg 2x
+          "
         />
         <img
           loading="lazy"
           class="img-fluid"
           src="~assets/img/section-contact/contact-wallpaper.jpg"
-          srcset="
-            ~assets/img/section-contact/contact-wallpaper.jpg    1x,
-            ~assets/img/section-contact/contact-wallpaper@2x.jpg 2x
-          "
           alt="Contact"
         />
       </picture>
