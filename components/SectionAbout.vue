@@ -3,6 +3,11 @@
     <div class="featured-img">
       <picture>
         <source
+          type="image/webp"
+          media="(max-width: 768px)"
+          srcset="~assets/img/section-about/about-wallpaper-sm.webp"
+        />
+        <source
           type="image/jpg"
           media="(max-width: 768px)"
           srcset="
@@ -12,22 +17,21 @@
         />
         <source
           type="image/webp"
-          media="(max-width: 768px)"
-          srcset="~assets/img/section-about/about-wallpaper.webp"
+          media="(min-width: 768px)"
+          srcset="~assets/img/section-about/about-wallpaper-sm.webp"
         />
         <source
-          type="image/webp"
-          media="(min-width: 768px)"
-          srcset="~assets/img/section-about/about-wallpaper.webp"
+          type="image/jpg"
+          media="(mix-width: 768px)"
+          srcset="
+            ~assets/img/section-about/about-wallpaper.jpg    1x,
+            ~assets/img/section-about/about-wallpaper@2x.jpg 2x
+          "
         />
         <img
           loading="lazy"
           class="img-fluid"
           src="~assets/img/section-about/about-wallpaper.jpg"
-          srcset="
-            ~assets/img/section-about/about-wallpaper.jpg    1x,
-            ~assets/img/section-about/about-wallpaper@2x.jpg 2x
-          "
           alt="Contact"
         />
       </picture>
@@ -42,6 +46,8 @@
               ~assets/img/matt-crandell.jpg    1x,
               ~assets/img/matt-crandell@2x.jpg 2x
             "
+            width="500"
+            height="332"
           />
           <img src="~assets/img/matt-crandell.jpg" alt="Matt Crandell" />
         </picture>
@@ -66,7 +72,12 @@
             type="image/jpg"
             srcset="~assets/img/charli.jpg 1x, ~assets/img/charli@2x.jpg 2x"
           />
-          <img src="~assets/img/charli.jpg" alt="Charli" />
+          <img
+            src="~assets/img/charli.jpg"
+            alt="Charli"
+            width="500"
+            height="332"
+          />
         </picture>
       </div>
       <div>
