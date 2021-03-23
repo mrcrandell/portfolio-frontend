@@ -1,5 +1,37 @@
 <template>
   <section id="contact" class="page">
+    <div class="featured-img">
+      <picture>
+        <source
+          type="image/jpg"
+          media="(max-width: 768px)"
+          srcset="
+            ~assets/img/section-contact/contact-wallpaper-sm.jpg    1x,
+            ~assets/img/section-contact/contact-wallpaper-sm@2x.jpg 2x
+          "
+        />
+        <source
+          type="image/webp"
+          media="(max-width: 768px)"
+          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+        />
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+        />
+        <img
+          loading="lazy"
+          class="img-fluid"
+          src="~assets/img/section-contact/contact-wallpaper.jpg"
+          srcset="
+            ~assets/img/section-contact/contact-wallpaper.jpg    1x,
+            ~assets/img/section-contact/contact-wallpaper@2x.jpg 2x
+          "
+          alt="Contact"
+        />
+      </picture>
+    </div>
     <div class="content">
       <header class="page-header">
         <h1>Contact</h1>
@@ -263,12 +295,28 @@ export default {
 section#contact {
   background: $rhino no-repeat center center fixed;
   color: #fff;
+  position: relative;
+  .content {
+    position: relative;
+    z-index: 9;
+  }
   h1,
   h2 {
     color: #fff;
   }
   .page-header {
     border-color: #fff;
+  }
+  .featured-img:not(.post-card-featured-img) {
+    &:before,
+    &:after {
+      opacity: 0.6;
+    }
+    img {
+      min-width: 0;
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+    }
   }
 }
 .contact-grid {

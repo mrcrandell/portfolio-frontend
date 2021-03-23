@@ -3,17 +3,30 @@
     <div class="featured-img">
       <picture>
         <source
+          type="image/jpg"
+          media="(max-width: 768px)"
+          srcset="
+            ~assets/img/section-intro/intro-wallpaper-sm.jpg    1x,
+            ~assets/img/section-intro/intro-wallpaper-sm@2x.jpg 2x
+          "
+        />
+        <source
           type="image/webp"
-          media="(min-width: 992px)"
-          srcset="~assets/img/intro-wallpaper.webp"
+          media="(max-width: 768px)"
+          srcset="~assets/img/section-intro/intro-wallpaper.webp"
+        />
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="~assets/img/section-intro/intro-wallpaper.webp"
         />
         <img
           loading="lazy"
           class="img-fluid"
-          src="~assets/img/intro-wallpaper.jpg"
+          src="~assets/img/section-intro/intro-wallpaper.jpg"
           srcset="
-            ~assets/img/intro-wallpaper.jpg    1x,
-            ~assets/img/intro-wallpaper@2x.jpg 2x
+            ~assets/img/section-intro/intro-wallpaper.jpg    1x,
+            ~assets/img/section-intro/intro-wallpaper@2x.jpg 2x
           "
           alt="Anybody can make a website"
         />

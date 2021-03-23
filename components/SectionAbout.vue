@@ -1,5 +1,37 @@
 <template>
   <section id="about" class="page">
+    <div class="featured-img">
+      <picture>
+        <source
+          type="image/jpg"
+          media="(max-width: 768px)"
+          srcset="
+            ~assets/img/section-about/about-wallpaper-sm.jpg    1x,
+            ~assets/img/section-about/about-wallpaper-sm@2x.jpg 2x
+          "
+        />
+        <source
+          type="image/webp"
+          media="(max-width: 768px)"
+          srcset="~assets/img/section-about/about-wallpaper.webp"
+        />
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="~assets/img/section-about/about-wallpaper.webp"
+        />
+        <img
+          loading="lazy"
+          class="img-fluid"
+          src="~assets/img/section-about/about-wallpaper.jpg"
+          srcset="
+            ~assets/img/section-about/about-wallpaper.jpg    1x,
+            ~assets/img/section-about/about-wallpaper@2x.jpg 2x
+          "
+          alt="Contact"
+        />
+      </picture>
+    </div>
     <div class="content">
       <div>
         <picture>
@@ -34,11 +66,27 @@
 section#about {
   background: $rhino no-repeat center center fixed;
   color: #fff;
+  position: relative;
+  .content {
+    position: relative;
+    z-index: 9;
+  }
   h1 {
     color: #fff;
   }
   .page-header {
     border-color: #fff;
+  }
+  .featured-img:not(.post-card-featured-img) {
+    &:before,
+    &:after {
+      opacity: 0.6;
+    }
+    img {
+      min-width: 0;
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+    }
   }
 }
 .content {
