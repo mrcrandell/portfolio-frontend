@@ -5,7 +5,7 @@
         <source
           type="image/webp"
           media="(max-width: 768px)"
-          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+          srcset="~assets/img/section-contact/contact-wallpaper-sm.webp"
         />
         <source
           type="image/jpg"
