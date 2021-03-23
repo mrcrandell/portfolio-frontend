@@ -36,14 +36,14 @@
       <div>
         <picture>
           <source type="image/webp" srcset="~assets/img/matt-crandell.webp" />
-          <img
-            src="~assets/img/matt-crandell.jpg"
+          <source
+            type="image/jpg"
             srcset="
               ~assets/img/matt-crandell.jpg    1x,
               ~assets/img/matt-crandell@2x.jpg 2x
             "
-            alt="Matt Crandell"
           />
+          <img src="~assets/img/matt-crandell.jpg" alt="Matt Crandell" />
         </picture>
       </div>
       <div>
@@ -59,6 +59,20 @@
           Design and Computer Information Systems from Ferris State University.
         </p>
       </div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="~assets/img/charli.webp" />
+          <source
+            type="image/jpg"
+            srcset="~assets/img/charli.jpg 1x, ~assets/img/charli@2x.jpg 2x"
+          />
+          <img src="~assets/img/charli.jpg" alt="Charli" />
+        </picture>
+      </div>
+      <div>
+        <h2>Hi, I'm Charli</h2>
+        <p>I don't know how to code but I am cute.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -71,7 +85,8 @@ section#about {
     position: relative;
     z-index: 9;
   }
-  h1 {
+  h1,
+  h2 {
     color: #fff;
   }
   .page-header {
