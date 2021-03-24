@@ -82,7 +82,7 @@
       </div>
       <div>
         <h2>Hi, I'm Charli</h2>
-        <p>I don't know how to code but I am cute.</p>
+        <p>What I lack in coding knowledge, I make up in cuteness.</p>
       </div>
     </div>
   </section>

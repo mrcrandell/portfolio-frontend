@@ -1,18 +1,30 @@
 <template>
   <nuxt-link class="portfolio-thumbnail" :to="`/portfolio/${project.slug}`">
     <div class="client-img">
-      <img
-        :srcset="`${displayImg2x} 2x`"
-        :src="project.displayImg"
-        :alt="project.name"
-        class="img-fluid main-img"
-      />
-      <img
-        :srcset="`${hoverImg2x} 2x`"
-        :src="project.hoverImg"
-        :alt="project.name"
-        class="img-fluid hover-img"
-      />
+      <picture>
+        <source type="image/webp" :srcset="displayWebp" />
+        <source
+          type="image/jpg"
+          :srcset="`${project.displayImg} 1x, ${displayImg2x} 2x`"
+        />
+        <img
+          :src="project.displayImg"
+          :alt="project.name"
+          class="img-fluid main-img"
+        />
+      </picture>
+      <picture>
+        <source type="image/webp" :srcset="hoverWebp" />
+        <source
+          type="image/jpg"
+          :srcset="`${project.hoverImg} 1x, ${hoverImg2x} 2x`"
+        />
+        <img
+          :src="project.hoverImg"
+          :alt="project.name"
+          class="img-fluid hover-img"
+        />
+      </picture>
     </div>
     <div class="info">
       <div class="client-name">{{ project.name }}</div>
@@ -39,8 +51,14 @@ export default {
     displayImg2x() {
       return this.project.displayImg.replace('.jpg', '@2x.jpg')
     },
+    displayWebp() {
+      return this.project.displayImg.replace('.jpg', '.webp')
+    },
     hoverImg2x() {
       return this.project.hoverImg.replace('.jpg', '@2x.jpg')
+    },
+    hoverWebp() {
+      return this.project.hoverImg.replace('.jpg', '.webp')
     },
   },
 }
