@@ -61,7 +61,12 @@
             width="500"
             height="332"
           />
-          <img src="~assets/img/matt-crandell.jpg" alt="Matt Crandell" />
+          <img
+            src="~assets/img/matt-crandell.jpg"
+            alt="Matt Crandell"
+            width="500"
+            height="332"
+          />
         </picture>
       </div>
       <div>
