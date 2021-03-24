@@ -11,6 +11,8 @@
           :src="project.displayImg"
           :alt="project.name"
           class="img-fluid main-img"
+          width="355"
+          height="213"
         />
       </picture>
       <picture>
@@ -23,6 +25,8 @@
           :src="project.hoverImg"
           :alt="project.name"
           class="img-fluid hover-img"
+          width="355"
+          height="213"
         />
       </picture>
     </div>
