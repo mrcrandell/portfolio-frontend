@@ -2,10 +2,11 @@
   <nuxt-link class="portfolio-thumbnail" :to="`/portfolio/${project.slug}`">
     <div class="client-img">
       <picture>
-        <source type="image/webp" :srcset="displayWebp" />
         <source
-          type="image/jpg"
-          :srcset="`${project.displayImg} 1x, ${displayImg2x} 2x`"
+          v-for="(img, index) in displayImgs"
+          :key="index"
+          :type="img.type"
+          :srcset="`${img.src1x} 1x, ${img.src2x} 2x`"
         />
         <img
           :src="project.displayImg"
@@ -16,10 +17,11 @@
         />
       </picture>
       <picture>
-        <source type="image/webp" :srcset="hoverWebp" />
         <source
-          type="image/jpg"
-          :srcset="`${project.hoverImg} 1x, ${hoverImg2x} 2x`"
+          v-for="(img, index) in hoverImgs"
+          :key="index"
+          :type="img.type"
+          :srcset="`${img.src1x} 1x, ${img.src2x} 2x`"
         />
         <img
           :src="project.hoverImg"
@@ -52,17 +54,33 @@ export default {
     },
   },
   computed: {
-    displayImg2x() {
-      return this.project.displayImg.replace('.jpg', '@2x.jpg')
+    displayImgs() {
+      return [
+        {
+          type: 'image/webp',
+          src1x: this.project.displayImg.replace('.jpg', '.webp'),
+          src2x: this.project.displayImg.replace('.jpg', '@2x.webp'),
+        },
+        {
+          type: 'image/jpg',
+          src1x: this.project.displayImg,
+          src2x: this.project.displayImg.replace('.jpg', '@2x.jpg'),
+        },
+      ]
     },
-    displayWebp() {
-      return this.project.displayImg.replace('.jpg', '.webp')
-    },
-    hoverImg2x() {
-      return this.project.hoverImg.replace('.jpg', '@2x.jpg')
-    },
-    hoverWebp() {
-      return this.project.hoverImg.replace('.jpg', '.webp')
+    hoverImgs() {
+      return [
+        {
+          type: 'image/webp',
+          src1x: this.project.hoverImg.replace('.jpg', '.webp'),
+          src2x: this.project.hoverImg.replace('.jpg', '@2x.webp'),
+        },
+        {
+          type: 'image/jpg',
+          src1x: this.project.hoverImg,
+          src2x: this.project.hoverImg.replace('.jpg', '@2x.jpg'),
+        },
+      ]
     },
   },
 }
