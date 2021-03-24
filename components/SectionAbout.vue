@@ -5,7 +5,10 @@
         <source
           type="image/webp"
           media="(max-width: 767px)"
-          srcset="~assets/img/section-about/about-wallpaper-sm.webp"
+          srcset="
+            ~assets/img/section-about/about-wallpaper-sm.webp    1x,
+            ~assets/img/section-about/about-wallpaper-sm@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"
@@ -18,7 +21,10 @@
         <source
           type="image/webp"
           media="(min-width: 768px)"
-          srcset="~assets/img/section-about/about-wallpaper-sm.webp"
+          srcset="
+            ~assets/img/section-about/about-wallpaper.webp    1x,
+            ~assets/img/section-about/about-wallpaper@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"
@@ -39,7 +45,13 @@
     <div class="content">
       <div>
         <picture>
-          <source type="image/webp" srcset="~assets/img/matt-crandell.webp" />
+          <source
+            type="image/webp"
+            srcset="
+              ~assets/img/matt-crandell.webp    1x,
+              ~assets/img/matt-crandell@2x.webp 2x
+            "
+          />
           <source
             type="image/jpg"
             srcset="
@@ -67,7 +79,10 @@
       </div>
       <div>
         <picture>
-          <source type="image/webp" srcset="~assets/img/charli.webp" />
+          <source
+            type="image/webp"
+            srcset="~assets/img/charli.webp 1x, ~assets/img/charli@2x.webp 2x"
+          />
           <source
             type="image/jpg"
             srcset="~assets/img/charli.jpg 1x, ~assets/img/charli@2x.jpg 2x"

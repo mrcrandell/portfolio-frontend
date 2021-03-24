@@ -5,7 +5,10 @@
         <source
           type="image/webp"
           media="(max-width: 767px)"
-          srcset="~assets/img/section-intro/intro-wallpaper-sm.webp"
+          srcset="
+            ~assets/img/section-intro/intro-wallpaper-sm.webp    1x,
+            ~assets/img/section-intro/intro-wallpaper-sm@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"
@@ -18,7 +21,10 @@
         <source
           type="image/webp"
           media="(min-width: 768px)"
-          srcset="~assets/img/section-intro/intro-wallpaper.webp"
+          srcset="
+            ~assets/img/section-intro/intro-wallpaper.webp    1x,
+            ~assets/img/section-intro/intro-wallpaper@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"

@@ -5,7 +5,10 @@
         <source
           type="image/webp"
           media="(max-width: 768px)"
-          srcset="~assets/img/section-contact/contact-wallpaper-sm.webp"
+          srcset="
+            ~assets/img/section-contact/contact-wallpaper-sm.webp    1x,
+            ~assets/img/section-contact/contact-wallpaper-sm@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"
@@ -18,7 +21,10 @@
         <source
           type="image/webp"
           media="(min-width: 768px)"
-          srcset="~assets/img/section-contact/contact-wallpaper.webp"
+          srcset="
+            ~assets/img/section-contact/contact-wallpaper.webp    1x,
+            ~assets/img/section-contact/contact-wallpaper@2x.webp 2x
+          "
         />
         <source
           type="image/jpg"
