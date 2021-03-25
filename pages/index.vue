@@ -46,7 +46,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Web development by Matt Crandell servicing all of Metro Detroit.',
+          'Matt Crandel is a seasoned front end web developer with over ten years experience working with everything from small businesses to large corporations.',
       },
     ],
   },
