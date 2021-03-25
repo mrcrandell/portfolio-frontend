@@ -4,20 +4,22 @@
       <template #picture>
         <source
           type="image/webp"
-          srcset="/img/portfolio/dodge-garage/featured-img.webp"
+          srcset="
+            /img/portfolio/dodge-garage/featured-webp.jpg    1x,
+            /img/portfolio/dodge-garage/featured-webp@2x.jpg 2x
+          "
         />
         <source
           type="image/jpeg"
-          srcset="/img/portfolio/dodge-garage/featured-img.jpg"
+          srcset="
+            /img/portfolio/dodge-garage/featured-img.jpg    1x,
+            /img/portfolio/dodge-garage/featured-img@2x.jpg 2x
+          "
         />
         <img
           loading="lazy"
           class="img-fluid"
           src="/img/portfolio/dodge-garage/featured-img.jpg"
-          srcset="
-            /img/portfolio/dodge-garage/featured-img.jpg    1x,
-            /img/portfolio/dodge-garage/featured-img@2x.jpg 2x
-          "
           alt="Dodge Garage"
         />
       </template>
@@ -50,7 +52,11 @@
           <figure class="figure">
             <img
               class="figure-img portfolio-img"
-              src="https://source.unsplash.com/1000x1751/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-login.png    1x,
+                /img/portfolio/dodge-garage/browser-login@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-login.png"
               alt="Login"
             />
             <figcaption class="figure-caption">Login</figcaption>
@@ -58,7 +64,11 @@
           <figure class="figure">
             <img
               class="figure-img portfolio-img"
-              src="https://source.unsplash.com/1000x1751/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-register.png    1x,
+                /img/portfolio/dodge-garage/browser-register@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-register.png"
               alt="Register"
             />
             <figcaption class="figure-caption">Register</figcaption>
