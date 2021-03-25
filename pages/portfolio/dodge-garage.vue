@@ -161,6 +161,7 @@
             <figure class="figure">
               <img
                 srcset="
+                  /img/portfolio/dodge-garage/mobile-1320-leaderboards.png 1x
                   /img/portfolio/dodge-garage/mobile-1320-leaderboards@2x.png 2x
                 "
                 src="/img/portfolio/dodge-garage/mobile-1320-leaderboards.png"
