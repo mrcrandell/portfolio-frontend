@@ -2,22 +2,24 @@
   <div class="project-container">
     <masthead :color="'#AA8B3C'">
       <template #picture>
-        <!-- <source
+        <source
           type="image/webp"
-          srcset="/img/portfolio/dodge-garage/featured-img.webp"
+          srcset="
+            /img/portfolio/mcriver-raid/featured-img.webp    1x,
+            /img/portfolio/mcriver-raid/featured-img@2x.webp 2x
+          "
         />
         <source
           type="image/jpeg"
-          srcset="/img/portfolio/dodge-garage/featured-img.jpg"
-        /> -->
+          srcset="
+            /img/portfolio/mcriver-raid/featured-img.jpg    1x,
+            /img/portfolio/mcriver-raid/featured-img@2x.jpg 2x
+          "
+        />
         <img
           loading="lazy"
           class="img-fluid"
-          src="https://source.unsplash.com/1920x1080/?corgi"
-          srcset="
-            https://source.unsplash.com/1920x1080/?corgi 1x,
-            https://source.unsplash.com/1920x1080/?corgi 2x
-          "
+          src="/img/portfolio/mcriver-raid/featured-img.jpg"
           alt="McRiver Raid"
         />
       </template>
@@ -43,7 +45,11 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="https://source.unsplash.com/1000x1751/?corgi"
+            srcset="
+              /img/portfolio/mcriver-raid/mobile-order.png    1x,
+              /img/portfolio/mcriver-raid/mobile-order@2x.png 2x
+            "
+            src="/img/portfolio/mcriver-raid/mobile-order.png"
             alt="Order Form"
           />
           <figcaption class="figure-caption">Order Form</figcaption>
@@ -51,7 +57,11 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="https://source.unsplash.com/1000x1751/?corgi"
+            srcset="
+              /img/portfolio/mcriver-raid/mobile-order-dropdown.png    1x,
+              /img/portfolio/mcriver-raid/mobile-order-dropdown@2x.png 2x
+            "
+            src="/img/portfolio/mcriver-raid/mobile-order-dropdown.png"
             alt="Order Form with Dropdown Expanded"
           />
           <figcaption class="figure-caption">
@@ -63,7 +73,11 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="https://source.unsplash.com/1000x1751/?corgi"
+            srcset="
+              /img/portfolio/mcriver-raid/mobile-order-login.png    1x,
+              /img/portfolio/mcriver-raid/mobile-order-login@2x.png 2x
+            "
+            src="/img/portfolio/mcriver-raid/mobile-order-login.png"
             alt="Order Summary - Login"
           />
           <figcaption class="figure-caption">Order Summary - Login</figcaption>
@@ -71,7 +85,11 @@
         <figure class="figure">
           <img
             class="figure-img portfolio-img portfolio-browser"
-            src="https://source.unsplash.com/1000x1751/?corgi"
+            srcset="
+              /img/portfolio/mcriver-raid/mobile-order-credit-card.png    1x,
+              /img/portfolio/mcriver-raid/mobile-order-credit-card@2x.png 2x
+            "
+            src="/img/portfolio/mcriver-raid/mobile-order-credit-card.png"
             alt="Order Summary - Credit Card"
           />
           <figcaption class="figure-caption">
