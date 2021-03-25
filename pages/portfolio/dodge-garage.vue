@@ -68,7 +68,10 @@
       <div>
         <h2>Homepage</h2>
         <img
-          srcset="/img/portfolio/dodge-garage/browser-homepage@2x.png 2x"
+          srcset="
+            /img/portfolio/dodge-garage/browser-homepage.png    1x,
+            /img/portfolio/dodge-garage/browser-homepage@2x.png 2x
+          "
           src="/img/portfolio/dodge-garage/browser-homepage.png"
           alt="Homepage"
           class="portfolio-img portfolio-browser"
@@ -105,8 +108,11 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/drag-strip-showdown-simulators.jpg    1x,
+                /img/portfolio/dodge-garage/drag-strip-showdown-simulators@2x.jpg 2x
+              "
+              src="/img/portfolio/dodge-garage/drag-strip-showdown-simulators.jpg"
               class="figure-img portfolio-img"
               alt="Onsite Simulators"
             />
@@ -114,8 +120,11 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-drag-strip-showdown.png 1x
+                /img/portfolio/dodge-garage/browser-drag-strip-showdown@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-drag-strip-showdown.png"
               class="figure-img portfolio-img portfolio-browser"
               alt="Leaderboard for Racers"
             />
@@ -138,7 +147,10 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="/img/portfolio/dodge-garage/browser-1320@2x.png 2x"
+              srcset="
+                /img/portfolio/dodge-garage/browser-1320.png    1x,
+                /img/portfolio/dodge-garage/browser-1320@2x.png 2x
+              "
               src="/img/portfolio/dodge-garage/browser-1320.png"
               class="figure-img portfolio-img portfolio-browser"
               alt="1320 Landing Page"
@@ -160,6 +172,7 @@
             <figure class="figure">
               <img
                 srcset="
+                  /img/portfolio/dodge-garage/mobile-1320-add-vehicle.png    1x,
                   /img/portfolio/dodge-garage/mobile-1320-add-vehicle@2x.png 2x
                 "
                 src="/img/portfolio/dodge-garage/mobile-1320-add-vehicle.png"
@@ -171,8 +184,11 @@
           </div>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-my-garage.png    1x,
+                /img/portfolio/dodge-garage/browser-my-garage@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-my-garage.png"
               class="figure-img portfolio-img portfolio-browser"
               alt="My Garage"
             />
@@ -180,8 +196,11 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-my-slip.png    1x,
+                /img/portfolio/dodge-garage/browser-my-slip@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-my-slip.png"
               class="figure-img portfolio-img portfolio-browser"
               alt="My Slip"
             />
@@ -194,8 +213,11 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-racing-hq.png    1x,
+                /img/portfolio/dodge-garage/browser-racing-hq@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-racing-hq.png"
               alt="Racing HQ Landing Page"
               class="figure-img portfolio-img portfolio-browser"
             />
@@ -207,8 +229,11 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
+              srcset="
+                /img/portfolio/dodge-garage/browser-track-locator.png    1x,
+                /img/portfolio/dodge-garage/browser-track-locator@2x.png 2x
+              "
+              src="/img/portfolio/dodge-garage/browser-track-locator.png"
               alt="Racing HQ Track Locator Page"
               class="figure-img portfolio-img portfolio-browser"
             />
