@@ -5,8 +5,8 @@
         <source
           type="image/webp"
           srcset="
-            /img/portfolio/dodge-garage/featured-webp.jpg    1x,
-            /img/portfolio/dodge-garage/featured-webp@2x.jpg 2x
+            /img/portfolio/dodge-garage/featured-img.webp    1x,
+            /img/portfolio/dodge-garage/featured-img@2x.webp 2x
           "
         />
         <source
@@ -48,31 +48,21 @@
       </p>
       <div>
         <h2>Login / Register</h2>
-        <div class="portfolio-item-grid">
-          <figure class="figure">
-            <img
-              class="figure-img portfolio-img"
-              srcset="
-                /img/portfolio/dodge-garage/browser-login.png    1x,
-                /img/portfolio/dodge-garage/browser-login@2x.png 2x
-              "
-              src="/img/portfolio/dodge-garage/browser-login.png"
-              alt="Login"
+        <div class="login-register-container">
+          <video autoplay loop class="figure-img portfolio-img">
+            <source
+              src="/video/portfolio/dodge-garage/mobile-sign-in-sign-up.mp4"
+              type="video/mp4"
             />
-            <figcaption class="figure-caption">Login</figcaption>
-          </figure>
-          <figure class="figure">
-            <img
-              class="figure-img portfolio-img"
-              srcset="
-                /img/portfolio/dodge-garage/browser-register.png    1x,
-                /img/portfolio/dodge-garage/browser-register@2x.png 2x
-              "
-              src="/img/portfolio/dodge-garage/browser-register.png"
-              alt="Register"
+            <source
+              src="/video/portfolio/dodge-garage/mobile-sign-in-sign-up.ogg"
+              type="video/ogg"
             />
-            <figcaption class="figure-caption">Register</figcaption>
-          </figure>
+            <source
+              src="/video/portfolio/dodge-garage/mobile-sign-in-sign-up.webm"
+              type="video/webm"
+            />
+          </video>
         </div>
       </div>
       <div>
@@ -356,3 +346,9 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.login-register-container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+</style>

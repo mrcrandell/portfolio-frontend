@@ -175,7 +175,8 @@ section.page {
       margin-bottom: 0;
       @include paragraph-sizing();
     }
-    img {
+    img,
+    video {
       max-width: 100%;
       height: auto;
       &.portfolio-img {
