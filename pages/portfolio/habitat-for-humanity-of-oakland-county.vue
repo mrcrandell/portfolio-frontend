@@ -2,22 +2,24 @@
   <div class="project-container">
     <masthead :color="'#00AFD7'">
       <template #picture>
-        <!-- <source
+        <source
           type="image/webp"
-          srcset="/img/portfolio/dodge-garage/featured-img.webp"
+          srcset="
+            /img/portfolio/habitat-for-humanity-of-oakland-county/featured-img.webp    1x,
+            /img/portfolio/habitat-for-humanity-of-oakland-county/featured-img@2x.webp 2x
+          "
         />
         <source
           type="image/jpeg"
-          srcset="/img/portfolio/dodge-garage/featured-img.jpg"
-        /> -->
+          srcset="
+            /img/portfolio/habitat-for-humanity-of-oakland-county/featured-img.jpg    1x,
+            /img/portfolio/habitat-for-humanity-of-oakland-county/featured-img@2x.jpg 2x
+          "
+        />
         <img
           loading="lazy"
           class="img-fluid"
-          src="https://source.unsplash.com/1920x1080/?corgi"
-          srcset="
-            https://source.unsplash.com/1920x1080/?corgi 1x,
-            https://source.unsplash.com/1920x1080/?corgi 2x
-          "
+          src="/img/portfolio/habitat-for-humanity-of-oakland-county/featured-img.jpg"
           alt="Habitat for Humanity of Oakland County"
         />
       </template>
@@ -152,5 +154,16 @@ export default {
   components: {
     Masthead,
     BaseTestimonial,
+  },
+  head: {
+    title: 'Habitat for Humanity of Oakland County | Matt Crandell',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'This custom WordPress backed website for news, events, and other valuable resources also features bright yet clean design.',
+      },
+    ],
   },
 }

@@ -117,12 +117,29 @@
         </div>
       </div>
       <div class="full-width">
+        <h2>Admin</h2>
         <figure class="figure">
-          <img
-            class="figure-img portfolio-img portfolio-browser"
-            src="https://source.unsplash.com/1920x1080/?corgi"
-            alt="Admin Order View"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /img/portfolio/mcriver-raid/browser-admin.webp    1x,
+                /img/portfolio/mcriver-raid/browser-admin@2x.webp 2x
+              "
+            />
+            <source
+              type="image/png"
+              srcset="
+                /img/portfolio/mcriver-raid/browser-admin.png    1x,
+                /img/portfolio/mcriver-raid/browser-admin@2x.png 2x
+              "
+            />
+            <img
+              class="figure-img portfolio-img portfolio-browser"
+              src="/img/portfolio/mcriver-raid/browser-admin.png"
+              alt="Admin Order View"
+            />
+          </picture>
           <figcaption class="figure-caption">Admin Order View</figcaption>
         </figure>
       </div>
