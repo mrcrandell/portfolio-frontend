@@ -52,10 +52,13 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-critical-home-repair.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-critical-home-repair@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-critical-home-repair.png"
               alt="Critical Home Repair Application"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               Critical Home Repair Application
@@ -63,10 +66,13 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-homeownership.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-homeownership@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-homeownership.png"
               alt="Homeownership Program Landing Page"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               Homeownership Program Landing Page
@@ -90,10 +96,13 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events.png"
               alt="Homepage News and Events Section"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               Homepage News and Events Section
@@ -101,10 +110,13 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events-landing.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events-landing@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-news-and-events-landing.png"
               alt="News and Events Landing Page"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               News and Events Landing Page
@@ -122,10 +134,13 @@
         <div class="portfolio-item-grid">
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-homepage.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-homepage@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-homepage.png"
               alt="Homepage Newsletter Signup"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               Homepage Newsletter Signup
@@ -133,10 +148,13 @@
           </figure>
           <figure class="figure">
             <img
-              srcset="https://source.unsplash.com/2000x1235/?corgi 2x"
-              src="https://source.unsplash.com/2000x1235/?corgi"
-              class="figure-img portfolio-img portfolio-browser"
+              srcset="
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-restore.png    1x,
+                /img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-restore@2x.png 2x
+              "
+              src="/img/portfolio/habitat-for-humanity-of-oakland-county/browser-newsletter-restore.png"
               alt="Restore Newsletter Signup"
+              class="figure-img portfolio-img portfolio-browser"
             />
             <figcaption class="figure-caption">
               Restore Newsletter Signup
