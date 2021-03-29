@@ -235,7 +235,7 @@ export default {
             .post(`${process.env.APP_URL}/api/contact`, contactData)
             .then((response) => {
               // eslint-disable-next-line
-              console.log(response.data)
+              // console.log(response.data)
               this.submitText = 'Send'
               this.isLoading = false
               this.alert.show = true
