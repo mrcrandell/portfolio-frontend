@@ -90,7 +90,7 @@ export default {
       pathRewrite: {'^/blog-api' : '/'}
     },
     '/api': { 
-      target: 'http://crandelldesign.test', 
+      target: 'http://crandelldesign.com', 
       ws: true,
       changeOrigin: true,
       pathRewrite: {'^/api' : '/'}
