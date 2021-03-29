@@ -14,17 +14,40 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - name: Install npm dependencies
-        run: npm install
-      - name: Run build task
-        run: npm run build:dev
+      #      - name: Install NPM Dependencies
+      #        run: npm install
+      #      - name: Run Build Task
+      #        run: npm run build
+      #      - name: Create Deployment Folder
+      #        run: mkdir deploy && cp -r .nuxt deploy/.nuxt && cp -r node_modules deploy/node_modules && cp -r static deploy/static && cp -r assets deploy/assets
+      - name: Remove Some Files
+        run: rm -fr .??*
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_BLOG_API_URL: 'https://blog-api.mattcrandell.com'
+          envkey_APP_URL: 'https://www.mattcrandell.com'
+          envkey_INVISIBLE_RECAPTCHA_SITEKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SITEKEY }}
+          envkey_INVISIBLE_RECAPTCHA_SECRETKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SECRETKEY }}
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: '-rltgoDzvO --delete'
-          SOURCE: 'dist/'
+          SOURCE: './'
           REMOTE_HOST: 64.4.160.12
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           REMOTE_PORT: 7822
-          TARGET: /var/www/vicksburgfamilydentistry/frontend-prod
+          TARGET: /var/www/portfolio/frontend-prod
+      - name: Run and Build
+        uses: appleboy/ssh-action@master
+        with:
+          host: 64.4.160.12
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 7822
+          script: |
+            cd /var/www/portfolio/frontend-prod
+            npm install
+            npm run build
+            pm2 reload PortfolioProd
