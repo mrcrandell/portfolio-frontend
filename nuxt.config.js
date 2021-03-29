@@ -89,11 +89,9 @@ export default {
       changeOrigin: true,
       pathRewrite: {'^/blog-api' : '/'}
     },
-    '/api': { 
-      target: 'http://crandelldesign.com', 
-      ws: true,
-      changeOrigin: true,
-      pathRewrite: {'^/api' : '/'}
+    '/api/': { 
+      target: 'https://www.crandelldesign.com',
+      pathRewrite: {'^/api' : ''},
     },
   },
 

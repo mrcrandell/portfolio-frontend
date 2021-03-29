@@ -219,7 +219,7 @@ export default {
           // Reset Errors
           // this.errors = {}
           // eslint-disable-next-line
-          console.log('ReCaptcha token:', token)
+          // console.log('ReCaptcha token:', token)
 
           // send token to server alongside your form data
           const contactData = {
@@ -232,7 +232,7 @@ export default {
           this.isLoading = true
           this.submitText = 'Sending...'
           await this.$axios
-            .post('/api/contact', contactData)
+            .post(`${process.env.APP_URL}/api/contact`, contactData)
             .then((response) => {
               // eslint-disable-next-line
               console.log(response.data)
