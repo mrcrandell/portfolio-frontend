@@ -27,6 +27,7 @@ jobs:
         with:
           envkey_BLOG_API_URL: 'https://blog-api.mattcrandell.com'
           envkey_APP_URL: 'https://www.mattcrandell.com'
+          envkey_GOOGLE_ANALYTICS_ID: 'UA-68370021-1'
           envkey_INVISIBLE_RECAPTCHA_SITEKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SITEKEY }}
           envkey_INVISIBLE_RECAPTCHA_SECRETKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SECRETKEY }}
       - name: Deploy to Server

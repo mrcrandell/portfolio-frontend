@@ -55,6 +55,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -101,5 +102,15 @@ export default {
     hideBadge: true,
     siteKey: process.env.INVISIBLE_RECAPTCHA_SITEKEY,
     version: 3
+  },
+
+  // Analytics
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   }
 }
