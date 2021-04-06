@@ -55,7 +55,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -65,6 +64,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/proxy',
     '@nuxtjs/recaptcha',
+    '@nuxtjs/gtm',
   ],
 
   axios: {},
@@ -105,11 +105,11 @@ export default {
   },
 
   // Analytics
-  googleAnalytics: {
+  gtm: {
     id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
   publicRuntimeConfig: {
-    googleAnalytics: {
+    gtm: {
       id: process.env.GOOGLE_ANALYTICS_ID
     }
   }
