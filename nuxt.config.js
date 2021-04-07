@@ -46,6 +46,7 @@ export default {
     { src: '~/plugins/mixins' },
     { src: '~/plugins/mutatePost' },
     { src: '~/plugins/prism' },
+    { src: '@/plugins/gtag' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -64,7 +65,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/proxy',
     '@nuxtjs/recaptcha',
-    '@nuxtjs/gtm',
+    // '@nuxtjs/gtm',
   ],
 
   axios: {},
@@ -105,12 +106,12 @@ export default {
   },
 
   // Analytics
-  gtm: {
+  /* gtm: {
     id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
   publicRuntimeConfig: {
     gtm: {
       id: process.env.GOOGLE_ANALYTICS_ID
     }
-  }
+  } */
 }
