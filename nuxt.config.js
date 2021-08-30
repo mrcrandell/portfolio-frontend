@@ -40,7 +40,9 @@ export default {
 
   serverMiddleware: [
     // { path: "/blog-api", handler: "~/server-middleware/blog-api.js" }, 
-    '~/middleware/seo'
+    '~/middleware/seo',
+    '~/server-middleware/api.js'
+    // { path: '/api', handler: '~/server-middleware/api.js' },
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -93,10 +95,10 @@ export default {
       changeOrigin: true,
       pathRewrite: {'^/blog-api' : '/'}
     },
-    '/api/': { 
+    /* '/api/': { 
       target: 'https://www.crandelldesign.com',
       pathRewrite: {'^/api' : ''},
-    },
+    }, */
   },
 
   // ReCaptcha
