@@ -6,12 +6,6 @@ const mustache = require('mustache');
 const juice = require('juice');
 const { body, validationResult } = require('express-validator');
 const axios = require('axios');
-// const Recaptcha = require('express-recaptcha').RecaptchaV3;
-// const recaptcha = new Recaptcha(process.env.INVISIBLE_RECAPTCHA_SITEKEY, process.env.INVISIBLE_RECAPTCHA_SECRETKEY, {callback:'cb'});
-// const mg = mailgun({apiKey: process.env.MAILGUN_DOMAIN, domain: process.env.MAILGUN_SECRET})
-// const nodemailer = require('nodemailer')
-// const validator = require('validator')
-// const xssFilters = require('xss-filters')
 
 const app = express()
 
@@ -59,7 +53,7 @@ app.post('/contact',
       let data = {
         from: 'postmaster@mailgun.mattcrandell.com',
         to: 'me@mattcrandell.com',
-        replyTo: emailData.email,
+        'h:Reply-To': emailData.email,
         subject: `You've Been Contacted from Your Website by ${emailData.name}`,
         html
       }
@@ -81,7 +75,7 @@ app.post('/contact',
       data = {
         from: 'postmaster@mailgun.mattcrandell.com',
         to: req.body.email,
-        replyTo: 'me@mattcrandell.com',
+        'h:Reply-To': 'me@mattcrandell.com',
         subject: 'Thank You for Contacting Matt Crandell',
         html
       }
