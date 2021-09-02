@@ -57,10 +57,10 @@ app.post('/contact',
       // const template = "{{name}} writes {{message_text}}";
       let html = juice(mustache.render(template, emailData));
       let data = {
-        from: 'matt@crandelldesign.com',
+        from: 'postmaster@mailgun.mattcrandell.com',
         to: 'me@mattcrandell.com',
         replyTo: emailData.email,
-        subject: `You've Been Contacted from Crandell Design by ${emailData.name}`,
+        subject: `You've Been Contacted from Your Website by ${emailData.name}`,
         html
       }
       mailgun.messages().send(data, function (error, body) {
@@ -75,11 +75,11 @@ app.post('/contact',
 
       emailData.emailBody = `<div>
           <h1>Thank You for Contacting Matt Crandell</h1>
-          <p>We will get back to you as quickly as possible.</p>
+          <p>I will get back to you as quickly as possible.</p>
         </div>`
       html = juice(mustache.render(template, emailData));
       data = {
-        from: 'matt@crandelldesign.com',
+        from: 'postmaster@mailgun.mattcrandell.com',
         to: req.body.email,
         replyTo: 'me@mattcrandell.com',
         subject: 'Thank You for Contacting Matt Crandell',
