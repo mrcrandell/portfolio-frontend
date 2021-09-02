@@ -32,6 +32,8 @@ jobs:
           envkey_GOOGLE_ANALYTICS_ID: 'G-2QS101YB7D'
           envkey_INVISIBLE_RECAPTCHA_SITEKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SITEKEY }}
           envkey_INVISIBLE_RECAPTCHA_SECRETKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SECRETKEY }}
+          envkey_MAILGUN_DOMAIN: ${{ secrets.ENVKEY_MAILGUN_DOMAIN }}
+          envkey_MAILGUN_SECRET: ${{ secrets.ENVKEY_MAILGUN_SECRET }}
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
