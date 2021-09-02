@@ -65,7 +65,7 @@
           </li>
           <li>
             <a
-              href="https://www.instagram.com/crandelldesign"
+              href="https://www.instagram.com/capncrandell"
               target="_blank"
               title="Instagram"
               rel="noreferrer noopener"
