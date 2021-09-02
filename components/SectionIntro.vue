@@ -43,7 +43,10 @@
       </picture>
     </div>
     <div class="content">
-      <h1 class="slogan heading">
+      <h1 v-if="isFromCrandellDesign" class="slogan heading">
+        Crandell Design might be gone, <br />but I'm still making websites.
+      </h1>
+      <h1 v-else class="slogan heading">
         Anybody can make a website, <br />let me make you a better one!
       </h1>
       <div class="button-holder">
@@ -70,6 +73,20 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      isFromCrandellDesign: false,
+    }
+  },
+  mounted() {
+    if (this.$route.query.utm_source === 'crandelldesign.com') {
+      this.isFromCrandellDesign = true
+    }
+  },
+}
+</script>
 <style lang="scss" scoped>
 #intro .featured-img:not(.post-card-featured-img) img {
   min-width: 0;
