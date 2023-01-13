@@ -16,6 +16,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/recaptcha": "^1.0.2",
     "core-js": "^3.6.5",
+    "express": "^4.18.2",
     "express-recaptcha": "^5.0.2",
     "express-validator": "^6.12.1",
     "fs": "0.0.1-security",
