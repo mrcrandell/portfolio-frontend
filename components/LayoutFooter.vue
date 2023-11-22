@@ -23,7 +23,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a
               href="http://twitter.com/crandelldesign"
               target="_blank"
@@ -42,7 +42,7 @@
                 ></path>
               </svg>
             </a>
-          </li>
+          </li> -->
           <li>
             <a
               href="https://www.linkedin.com/company/crandell-design"
