@@ -24,7 +24,7 @@ const validationBodyRules = [
   body('name').not().isEmpty().trim().escape(),
   body('email').isEmail().normalizeEmail(),
   body('message_text').not().isEmpty().trim().escape(),
-  // body('recaptcha_token').not().isEmpty(),
+  body('recaptcha_token').not().isEmpty(),
 ];
 
 app.post('/contact', 
@@ -37,7 +37,7 @@ app.post('/contact',
     axios
     .post(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.INVISIBLE_RECAPTCHA_SECRETKEY}&response=${req.body.recaptcha_token}`).then((response) => {
       if (!response.data.success) {
-        // return res.status(400).json({ errors: [{"msg":"Recaptcha failed","param":"recaptcha_token","location":"body"}] });
+        return res.status(400).json({ errors: [{"msg":"Recaptcha failed","param":"recaptcha_token","location":"body"}] });
       }
       const emailData = {
         name: req.body.name,
