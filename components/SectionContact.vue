@@ -286,6 +286,10 @@ export default {
         this.errors.message_text = {}
         this.errors.message_text.messages = []
         this.errors.message_text.messages.push('Please enter a message.')
+      } else if (!this.hasWhiteSpace(this.message_text)) {
+        this.errors.message_text = {};
+        this.errors.message_text.messages = [];
+        this.errors.message_text.messages.push('Please enter more than one word.');
       }
 
       return Object.keys(this.errors).length === 0
@@ -298,6 +302,9 @@ export default {
       this.errors = {}
       this.isLoading = false
     },
+    hasWhiteSpace(s) {
+      return /\s/g.test(s);
+    }
   },
 }
 </script>
@@ -340,7 +347,7 @@ section#contact {
   padding-top: 29px;
   p {
     font-size: 1.25rem; // 20px
-    margin-bottom: $paragraph-margin-bottom / 2;
+    margin-bottom: math.div($paragraph-margin-bottom, 2);
     @media (min-width: $grid-lg) {
       font-size: 1.5625rem; // 25px
     }

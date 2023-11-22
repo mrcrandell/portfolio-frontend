@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const mailgun = require('mailgun-js')({apiKey: process.env.MAILGUN_SECRET, domain: process.env.MAILGUN_DOMAIN});
+const formData = require('form-data');
+const Mailgun = require('mailgun.js');
+const mailgun = new Mailgun(formData);
+const client = mailgun.client({username: 'api', key: process.env.MAILGUN_API});
+// const mailgun = require('mailgun-js')({apiKey: process.env.MAILGUN_SECRET, domain: process.env.MAILGUN_DOMAIN});
 const mustache = require('mustache');
 const juice = require('juice');
 const { body, validationResult } = require('express-validator');
@@ -12,7 +16,7 @@ const app = express()
 app.use(express.json())
 
 app.get('/', function (req, res) {
-  console.log(process.env.MAILGUN_DOMAIN)
+  // console.log(process.env.MAILGUN_DOMAIN)
   res.status(405).json({ error: 'sorry!' })
 })
 
@@ -20,7 +24,7 @@ const validationBodyRules = [
   body('name').not().isEmpty().trim().escape(),
   body('email').isEmail().normalizeEmail(),
   body('message_text').not().isEmpty().trim().escape(),
-  body('recaptcha_token').not().isEmpty(),
+  // body('recaptcha_token').not().isEmpty(),
 ];
 
 app.post('/contact', 
@@ -33,7 +37,7 @@ app.post('/contact',
     axios
     .post(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.INVISIBLE_RECAPTCHA_SECRETKEY}&response=${req.body.recaptcha_token}`).then((response) => {
       if (!response.data.success) {
-        return res.status(400).json({ errors: [{"msg":"Recaptcha failed","param":"recaptcha_token","location":"body"}] });
+        // return res.status(400).json({ errors: [{"msg":"Recaptcha failed","param":"recaptcha_token","location":"body"}] });
       }
       const emailData = {
         name: req.body.name,
@@ -57,15 +61,22 @@ app.post('/contact',
         subject: `You've Been Contacted from Your Website by ${emailData.name}`,
         html
       }
-      mailgun.messages().send(data, function (error, body) {
+      client.messages.create(process.env.MAILGUN_DOMAIN, data)
+      .then(() => {
+        res.status(200).json({ 'success_message': 'Thank you for contacting me, I will get back to you as soon as possible.' })
+      })
+      .catch((error) => {
+        console.log("got an error: ", error);
+      });
+      /* mailgun.messages().send(data, function (error, body) {
         if (error) {
-          res.render('error', { error });
+          // res.render('error', { error });
           console.log("got an error: ", error);
         } else {
           // console.log(body)
           res.status(200).json({ 'success_message': 'Thank you for contacting me, I will get back to you as soon as possible.' })
         }
-      });
+      }); */
 
       emailData.emailBody = `<div>
           <h1>Thank You for Contacting Matt Crandell</h1>
@@ -79,7 +90,15 @@ app.post('/contact',
         subject: 'Thank You for Contacting Matt Crandell',
         html
       }
-      mailgun.messages().send(data, function (error, body) {
+      client.messages.create(process.env.MAILGUN_DOMAIN, data)
+      .then((res) => {
+        // res.status(200).json({ 'success_message': 'Thank you for contacting me, I will get back to you as soon as possible.' })
+      })
+      .catch((error) => {
+        res.render('error', { error });
+        console.log("got an error: ", error);
+      });
+      /* mailgun.messages().send(data, function (error, body) {
         if (error) {
           res.render('error', { error });
           console.log("got an error: ", error);
@@ -87,7 +106,7 @@ app.post('/contact',
           // console.log(body)
           // res.status(200).json({ 'success_message': 'Thank you for contacting me, I will get back to you as soon as possible.' })
         }
-      });
+      }); */
       
     });
     

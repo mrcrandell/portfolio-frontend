@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Body
 //$body-bg: #f8fafc;
 
@@ -70,7 +72,7 @@ $font-size-base: 1.125rem; // 18px
 $font-size-sm: 0.875rem; // 14px
 $font-weight-base: 300;
 $line-height-base: 1.5;
-$headings-margin-bottom: $spacer / 2;
+$headings-margin-bottom: math.div($spacer, 2);
 $paragraph-margin-bottom: 1rem;
 $body-color: $mostly-black;
 $body-bg: #fff;
@@ -89,7 +91,7 @@ $h3-font-size: $font-size-base * 2; // 36px
 $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
-$headings-margin-bottom: ($spacer / 2);
+$headings-margin-bottom: math.div($spacer, 2);
 $headings-font-family: inherit;
 $headings-font-weight: 500;
 $headings-line-height: 1.2;

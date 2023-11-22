@@ -34,6 +34,7 @@ jobs:
           envkey_INVISIBLE_RECAPTCHA_SECRETKEY: ${{ secrets.ENVKEY_INVISIBLE_RECAPTCHA_SECRETKEY }}
           envkey_MAILGUN_DOMAIN: ${{ secrets.ENVKEY_MAILGUN_DOMAIN }}
           envkey_MAILGUN_SECRET: ${{ secrets.ENVKEY_MAILGUN_SECRET }}
+          envkey_MAILGUN_API: ${{ secrets.ENVKEY_MAILGUN_API }}
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:

@@ -1,10 +1,12 @@
+@use "sass:math";
+
 // Alerts
 .alert {
   @include box_shadow(3);
   padding: 0.5rem 1rem;
   border: 5px solid #fff;
   color: #fff;
-  margin-bottom: $paragraph-margin-bottom / 2;
+  margin-bottom: math.div($paragraph-margin-bottom, 2);
   line-height: 1.3;
 }
 .alert-success {
