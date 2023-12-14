@@ -58,13 +58,13 @@ export default {
       return [
         {
           type: 'image/webp',
-          src1x: this.project.displayImg.replace('.jpg', '.webp'),
-          src2x: this.project.displayImg.replace('.jpg', '@2x.webp'),
+          src1x: this.project.displayImg?.replace('.jpg', '.webp'),
+          src2x: this.project.displayImg?.replace('.jpg', '@2x.webp'),
         },
         {
           type: 'image/jpg',
           src1x: this.project.displayImg,
-          src2x: this.project.displayImg.replace('.jpg', '@2x.jpg'),
+          src2x: this.project.displayImg?.replace('.jpg', '@2x.jpg'),
         },
       ]
     },
@@ -72,13 +72,13 @@ export default {
       return [
         {
           type: 'image/webp',
-          src1x: this.project.hoverImg.replace('.jpg', '.webp'),
-          src2x: this.project.hoverImg.replace('.jpg', '@2x.webp'),
+          src1x: this.project.hoverImg?.replace('.jpg', '.webp'),
+          src2x: this.project.hoverImg?.replace('.jpg', '@2x.webp'),
         },
         {
           type: 'image/jpg',
           src1x: this.project.hoverImg,
-          src2x: this.project.hoverImg.replace('.jpg', '@2x.jpg'),
+          src2x: this.project.hoverImg?.replace('.jpg', '@2x.jpg'),
         },
       ]
     },
