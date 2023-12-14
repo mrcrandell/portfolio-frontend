@@ -13,6 +13,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
 import PostCard from '~/components/post/PostCard'
 import PostPagination from '~/components/post/PostPagination'
 export default {
@@ -24,14 +25,38 @@ export default {
   mixins: {
     mutatePost: Function,
   },
-  async asyncData({ app, store, params, $mutatePost }) {
+  async fetch() {
     // Get category data if needed
-    if (!store.state.categories) {
-      const categoryResponse = await app.$axios.get(
+    if (this.store.state.categories) {
+      const categoryResponse = await axios.get(
         `${process.env.APP_URL}/blog-api/wp-json/wp/v2/categories?per_page=100`
       )
-      store.commit('setCategories', categoryResponse.data)
+      this.store.commit('setCategories', categoryResponse.data)
     }
+    // Begin setting params
+    const getParams = {}
+    getParams.page = this.$route.params.pageNum ? this.$route.params.pageNum : 1
+    if (this.$route.params.category) {
+      const selectedCategory = this.store.state.categories.filter(
+        (category) => category.slug === this.$route.params.category
+      )[0]
+      getParams.categories = selectedCategory.id
+    }
+    // Get posts
+    const { data, headers } = await this.axios.get(
+      `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts?orderby=date&per_page=10&_embed`,
+      {
+        params: getParams,
+      }
+    )
+    data.forEach((postData) => {
+      const post = this.mutatePost(postData)
+      this.posts.push(post)
+    });
+    this.totalPages = headers['x-wp-totalpages'];
+  },
+  /* async asyncData({ app, store, params, $mutatePost }) {
+    
     // Begin setting params
     const getParams = {}
     getParams.page = params.pageNum ? params.pageNum : 1
@@ -56,10 +81,11 @@ export default {
     // eslint-disable-next-line
     // console.log(data)
     return { posts, totalPages: headers['x-wp-totalpages'] }
-  },
+  }, */
   data() {
     return {
-      // totalPages: 1,
+      posts: [],
+      totalPages: 1,
       currentPage: this.$route.params.pageNum ? this.$route.params.pageNum : 1,
     }
   },

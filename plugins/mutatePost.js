@@ -3,12 +3,14 @@ export default ({ app }, inject) => {
   // Inject $hello(msg) in Vue, context and store.
   inject('mutatePost', (postData) => {
     const post = {}
-    post.title = postData.title.rendered
+    post.title = postData.title.rendered;
     // http://blog-api.mattcrandell.test/blog-api/uncategorized/2020/11/hello-world/
+    // http://localhost:3000/https://dev.mattcrandell.com/blog-api/server-stuff/2020/12/setting-up-an-ubuntu-20-04-web-server/
     post.link = postData.link.replace(
       `${process.env.APP_URL}/blog-api`,
       '/blog'
-    )
+    );
+
     post.originalLink = postData.link
     post.apiUrl = `${process.env.APP_URL}/blog-api`
     post.date = new Date(postData.date)
