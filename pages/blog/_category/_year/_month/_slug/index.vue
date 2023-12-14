@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import { dateFilter } from 'vue-date-fns'
 import PostFeaturedImg from '~/components/post/PostFeaturedImg'
 import Prism from '~/plugins/prism'
@@ -37,25 +36,18 @@ export default {
   filters: {
     date: dateFilter,
   },
-  mixins: {
-    mutatePost: Function,
-  },
-  async fetch() {
-    const { data } = await this.axios.get(
+  async asyncData({ app, params, $mutatePost }) {
+    const { data } = await app.$axios.get(
       `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts`,
       {
         params: {
-          slug: this.$route.params.slug,
+          slug: params.slug,
           _embed: true,
         },
       }
     )
-    this.post = this.mutatePost(data[0])
-  },
-  data() {
-    return {
-      post: {},
-    }
+    const post = $mutatePost(data[0])
+    return { post }
   },
   mounted() {
     Prism.highlightAll()

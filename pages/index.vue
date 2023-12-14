@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import SectionIntro from '~/components/SectionIntro'
 import SectionPortfolio from '~/components/SectionPortfolio'
 import SectionContact from '~/components/SectionContact'
@@ -23,26 +22,22 @@ export default {
     SectionAbout,
     SectionBlog,
   },
-  mixins: {
-    mutatePost: Function,
-  },
-  async fetch() {
-    this.projects = await axios.get(
+  async asyncData({ app, $mutatePost }) {
+    const projects = await app.$axios.get(
       `${process.env.APP_URL}/data/portfolio.json`
-    );
-    const { data } = await axios.get(
+    )
+
+    // Get posts
+    const { data } = await app.$axios.get(
       `${process.env.APP_URL}/blog-api/wp-json/wp/v2/posts?orderby=date&per_page=2&_embed`
     )
+    const posts = []
     data.forEach((postData) => {
-      const post = this.mutatePost(postData)
-      this.posts.push(post)
+      const post = $mutatePost(postData)
+      posts.push(post)
     })
-  },
-  data() {
-    return {
-      projects: [],
-      posts: [],
-    }
+
+    return { projects: projects.data, posts }
   },
   head: {
     title: "Matt Crandell's Portfolio | Web Developer",

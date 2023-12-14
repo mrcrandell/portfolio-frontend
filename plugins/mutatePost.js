@@ -9,6 +9,9 @@ export default ({ app }, inject) => {
     post.link = postData.link.replace(
       `${process.env.APP_URL}/blog-api`,
       '/blog'
+    ).replace(
+      `https://dev.mattcrandell.com/blog-api`,
+      '/blog'
     );
 
     post.originalLink = postData.link
