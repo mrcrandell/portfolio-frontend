@@ -97,7 +97,7 @@
     padding: 2rem; // 32px
   }
   .logo-container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
   }
   :deep(.logo) {
