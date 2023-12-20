@@ -1,0 +1,141 @@
+// Buttons
+.btn {
+  display: inline-block;
+  // font-family: $input-btn-font-family;
+  // font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  text-decoration: none;
+  //white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $border-width solid transparent;
+  @include button-size(
+    $input-btn-padding-y,
+    $input-btn-padding-x,
+    $input-btn-font-size,
+    $input-btn-line-height
+  );
+  @include transition(
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out
+  );
+
+  &:hover,
+  &.hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  @include box_shadow(1);
+  &:focus,
+  &.focus {
+    //outline: 0;
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+.btn-primary {
+  background-color: $apple;
+  color: #fff;
+  //@include shadow-1();
+  &:hover,
+  &:focus {
+    background-color: $goblin;
+    color: #fff;
+  }
+}
+.btn-secondary {
+  background-color: $sanmarino;
+  color: #fff;
+  //border-color: #FFF;
+  //@include shadow-1();
+  &:hover,
+  &:focus {
+    background-color: $rhino;
+    color: #fff;
+  }
+}
+.btn-tertiary {
+  background-color: $red;
+  color: #fff;
+  //border-color: #FFF;
+  //@include shadow-1();
+  &:hover,
+  &:focus {
+    background-color: darken($red, 7.5%);
+    color: #fff;
+  }
+}
+.btn-outline-primary {
+  border: 1px solid #fff;
+  background: none;
+  &:hover,
+  &:focus {
+    background: $apple;
+    background: rgba($apple, 0.5);
+  }
+}
+.btn-outline-secondary {
+  border: 1px solid #fff;
+  background: none;
+  &:hover,
+  &:focus {
+    background: $sanmarino;
+    background: rgba($sanmarino, 0.5);
+  }
+}
+.btn-outline-white {
+  color: #fff;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #fff;
+  &:hover {
+    color: $black;
+    background-color: #fff;
+  }
+  &.disabled,
+  &:disabled {
+    color: #fff;
+    background-color: transparent;
+  }
+}
+.btn-sm {
+  @include button-size(
+    $input-btn-padding-y-sm,
+    $input-btn-padding-x-sm,
+    $font-size-sm,
+    $input-btn-line-height
+  );
+}
+
+// Transitions
+.fade-enter-active,
+.fade-leave-active {
+  @include transition(opacity 0.3s ease-in-out);
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.slide-fade-enter-active {
+  transition: all 0.15s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.15s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  // .slide-fade-leave-active for <2.1.8
+  transform: translateX(10px);
+  opacity: 0;
+}
+.transition-delay {
+  transition-delay: 0.3s;
+}
