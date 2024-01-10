@@ -56,11 +56,28 @@ jobs:
       #     TARGET: /var/www/portfolio/frontend-dev
       - name: Create SSH key
         run: |
-          install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          echo "45.4.172.174" > ~/.ssh/known_hosts
+          which ssh-agent || (sudo apk update && sudo apk add openssh-client)
+          which rsync || (sudo apk update && sudo apk add rsync)
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          touch ~/.ssh/private.key
+          touch ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/private.key
+          echo -e "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/private.key
+          # Append keyscan output into known hosts
+          ssh-keyscan 45.4.172.174 >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+      #- name: Create SSH key
+      #  run: |
+      #    install -m 600 -D /dev/null ~/.ssh/id_rsa
+      #    echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+      #    echo "45.4.172.174" > ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -rltgoDzvO --delete 'ssh -p 7822' ./ deploy@45.4.172.174:/var/www/portfolio/frontend-dev
+        run: |
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/private.key
+          echo "Deploy to dev environment"
+          rsync -rltgoDzvO --delete 'ssh -p 7822' ./ deploy@45.4.172.174:/var/www/portfolio/frontend-dev
       - name: Run and Build
         uses: appleboy/ssh-action@master
         with:
