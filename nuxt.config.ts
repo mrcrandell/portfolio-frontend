@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     'nuxt-proxy',
     ['@nuxtjs/eslint-module', {
       fix: true
-    }]
+    }],
+    'nuxt-gtag'
   ],
   vite: {
     css: {
@@ -30,5 +31,8 @@ export default defineNuxtConfig({
     public: {
       invisibleRecaptchaSiteKey: process.env.INVISIBLE_RECAPTCHA_SITEKEY,
     }
+  },
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   }
 })

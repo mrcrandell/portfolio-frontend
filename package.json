@@ -17,6 +17,7 @@
     "@types/mustache": "^4.2.5",
     "eslint": "^8.54.0",
     "nuxt": "^3.8.2",
+    "nuxt-gtag": "^1.1.2",
     "sass": "^1.67.0"
   },
   "overrides": {

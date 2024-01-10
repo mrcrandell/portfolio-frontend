@@ -12,6 +12,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      # - name: Install Node.js
+      #  uses: actions/setup-node@v1
+      #  with:
+      #    node-version: "14.x"
+      #      - name: Install NPM Dependencies
+      #        run: npm install
+      #      - name: Run Build Task
+      #        run: npm run build
+      #      - name: Create Deployment Folder
+      #        run: mkdir deploy && cp -r .nuxt deploy/.nuxt && cp -r node_modules deploy/node_modules && cp -r static deploy/static && cp -r assets deploy/assets
       - name: Remove Some Files
         run: rm -fr .??*
       - name: Make envfile
@@ -25,15 +35,35 @@ jobs:
           envkey_MAILGUN_DOMAIN: ${{ secrets.ENVKEY_MAILGUN_DOMAIN }}
           envkey_MAILGUN_SECRET: ${{ secrets.ENVKEY_MAILGUN_SECRET }}
           envkey_MAILGUN_API: ${{ secrets.ENVKEY_MAILGUN_API }}
+      #- name: Deploy to Server
+      #  uses: appleboy/scp-action@v0.1.4
+      #  with:
+      #    host: 45.4.172.174
+      #    username: ${{ secrets.SSH_USERNAME }}
+      #    password: ${{ secrets.SSH_PASSWORD }}
+      #    port: 7822
+      #    source: './'
+      #    target: /var/www/portfolio/frontend-dev
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: unnecessary
+
       - name: Adding Known Hosts
         run: ssh-keyscan -p 7822 -H 45.4.172.174 >> ~/.ssh/known_hosts
       - name: Deploy with rsync
         run: rsync -rltgoDzvO --delete -e 'ssh -p 7822' ./ ${{ secrets.SSH_USERNAME }}@45.4.172.174:/var/www/portfolio/frontend-dev
+      #- name: Deploy to Server
+      #  uses: easingthemes/ssh-deploy@v2.1.5
+      #  env:
+      #    SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #    ARGS: "-rltgoDzvO --delete"
+      #    SOURCE: "./"
+      #    REMOTE_HOST: 45.4.172.174
+      #    REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+      #    REMOTE_PORT: 7822
+      #    TARGET: /var/www/portfolio/frontend-dev
       - name: Run and Build
         uses: appleboy/ssh-action@master
         with:
