@@ -1,0 +1,41 @@
+// Home
+#intro,
+#portfolio-intro {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  //padding-top: $heading-height-lg;
+  // background: $rhino url(/img/home-container-bg-mobile.jpg) no-repeat center center;
+  background: $rhino;
+  // background-size: cover;
+  /* background-image: url('~assets/img/intro-wallpaper.jpg');
+  background-image: image-set(
+    url('~assets/img/intro-wallpaper.jpg') 1x,
+    url('~assets/img/intro-wallpaper@2x.jpg') 2x
+  );*/
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  .content {
+    position: relative;
+    z-index: 9;
+    //padding-top: 15px;
+    text-align: center;
+  }
+  h1.slogan {
+    color: #fff;
+    font-size: $h3-font-size;
+    line-height: normal;
+    //margin-top: 100px;
+    margin-bottom: 1.875rem; // 30px
+    @media (min-width: $grid-sm) {
+      font-size: $h1-font-size;
+    }
+    br {
+      display: none;
+      @media (min-width: $grid-sm) {
+        display: block;
+      }
+    }
+  }
+}

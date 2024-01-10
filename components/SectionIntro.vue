@@ -3,7 +3,7 @@
     id="intro"
     class="page"
   >
-    <BaseMasthead>
+    <BaseBackground>
       <picture>
         <source
           type="image/webp"
@@ -44,7 +44,7 @@
           alt="Anybody can make a website"
         >
       </picture>
-    </BaseMasthead>
+    </BaseBackground>
     <div class="content">
       <h1
         v-if="isFromCrandellDesign"
@@ -62,7 +62,6 @@
         <nuxtLink
           :to="{ path: '/', hash: '#portfolio' }"
           class="btn btn-outline-white"
-          @click="scrollIntoView('portfolio')"
         >
           See For Yourself
           <svg

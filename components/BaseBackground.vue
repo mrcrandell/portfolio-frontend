@@ -1,11 +1,11 @@
 <template>
-  <div class="masthead">
+  <div class="base-background">
     <slot />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.masthead {
+.base-background {
   &:before,
   &:after {
     display: block;

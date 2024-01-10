@@ -3,7 +3,7 @@
     id="about"
     class="page"
   >
-    <BaseMasthead>
+    <BaseBackground>
       <picture>
         <source
           type="image/webp"
@@ -44,7 +44,7 @@
           alt="Contact"
         >
       </picture>
-    </BaseMasthead>
+    </BaseBackground>
     <div class="content">
       <div>
         <picture>
@@ -89,14 +89,14 @@
         <picture>
           <source
             type="image/webp"
-            srcset="~assets/img/charli.webp 1x, ~assets/img/charli@2x.webp 2x"
+            srcset="~assets/img/charli-2023.webp 1x, ~assets/img/charli-2023@2x.webp 2x"
           >
           <source
             type="image/jpg"
-            srcset="~assets/img/charli.jpg 1x, ~assets/img/charli@2x.jpg 2x"
+            srcset="~assets/img/charli-2023.jpg 1x, ~assets/img/charli-2023@2x.jpg 2x"
           >
           <img
-            src="~assets/img/charli.jpg"
+            src="~assets/img/charli-2023.jpg"
             alt="Charli"
             width="500"
             height="332"

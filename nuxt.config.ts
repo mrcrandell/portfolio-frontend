@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
+            @use 'sass:math';
             @import "@/assets/scss/_variables.scss";
             @import "@/assets/scss/_mixins.scss";
           `
@@ -21,6 +22,13 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
-  
-  telemetry: false
+  telemetry: false,
+  runtimeConfig: {
+    invisibleRecaptchaSecretkey: process.env.INVISIBLE_RECAPTCHA_SECRETKEY,
+    mailgunDomain: process.env.MAILGUN_DOMAIN,
+    mailgunApi: process.env.MAILGUN_API,
+    public: {
+      invisibleRecaptchaSiteKey: process.env.INVISIBLE_RECAPTCHA_SITEKEY,
+    }
+  }
 })
