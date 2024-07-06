@@ -10,7 +10,7 @@ export const useContactValidation = () => {
       "string.empty": "Please enter your email.",
       "any.required": "Please enter your email."
     }),
-    messageText: Joi.string().trim().required().regex(/^\w+\s+\w+$/).messages({
+    messageText: Joi.string().trim().required().regex(/\w+(?:\s+\w+)+/).messages({
       "string.pattern.base": `Please enter more than one word.`,
       "string.empty": "Please enter a message.",
       "any.required": "Please enter a message."
