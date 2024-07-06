@@ -6,7 +6,7 @@ useHead({
   meta: [
     { name: 'description', content: route.meta.description }
   ],
-})
+});
 </script>
 <template>
   <div>
