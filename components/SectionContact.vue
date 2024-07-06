@@ -64,7 +64,7 @@ async function submitForm() {
   }
 
   const { error } = contactValidation.validate(formData, { abortEarly: false });
-  console.log(error?.details);
+  // console.log(error?.details);
   if (error) {
     isLoading.value = false;
     alert.value = {
@@ -92,15 +92,19 @@ async function submitForm() {
       status: 'success',
       message: data.successMessage,
     };
+    name.value = '';
+    email.value = '';
+    messageText.value = '';
+    recaptchaToken.value = '';
   } catch(error) {
     alert.value = {
       show: true,
       status: 'danger',
       message: 'Please correct the errors in red on the form.',
     };
-    console.log(error.data);
+    // console.log(error.data);
     errorsRaw.value = error.data;
-    console.log(errors.value);
+    // console.log(errors.value);
   } finally {
     isLoading.value = false;
   }
