@@ -33,7 +33,7 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -p 7822 -H 45.4.172.174 >> ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -rltgoDzvO --delete  --exclude={'.git','node_modules','.nuxt','.output','.DS_Store'} -e 'ssh -p 7822' ./ ${{ secrets.SSH_USERNAME }}@45.4.172.174:/var/www/portfolio/frontend-dev
+        run: rsync -rltgoDzvO --delete --exclude={'.git','node_modules','.nuxt','.output','.DS_Store'} -e 'ssh -p 7822' ./ ${{ secrets.SSH_USERNAME }}@45.4.172.174:/var/www/portfolio/frontend-dev
       - name: Run and Build
         uses: appleboy/ssh-action@master
         with:
