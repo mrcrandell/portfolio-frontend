@@ -64,7 +64,7 @@ async function submitForm() {
   }
 
   const { error } = contactValidation.validate(formData, { abortEarly: false });
-  // console.log(error.details);
+  console.log(error?.details);
   if (error) {
     isLoading.value = false;
     alert.value = {
@@ -75,7 +75,6 @@ async function submitForm() {
     errorsRaw.value = error.details;
     return;
   }
-
   // console.log(recaptchaToken.value);
   try {
     const data = await $fetch('/api/contact', {
